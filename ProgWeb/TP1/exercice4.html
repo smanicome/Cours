@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Exercice 4</title>
+  <link rel="stylesheet" type="text/css" href="tp1.css" media="screen" />
+</head>
+
+<body>
+  <header>
+    <h1>MANICOME Compte Rendu de TP1</h1>
+    <nav>
+      <a href="./tp1.html">Exercice 1</a>
+      <a href="./exercice2.html">Exercice 2</a>
+      <a href="./exercice3.html">Exercice 3</a>
+      <a href="#">Exercice 4</a>
+      <a href="./exercice5.html">Exercice 5</a>
+      <a href="./conclusion.html">Conclusion personnelle</a>
+    </nav>
+    <h2>Exercice 4 - Service HTTP</h2>
+  </header>
+
+  <ol>
+    <li>
+      <dt>Utilisez nc pour vous connecter au serveur Web de la machine monge.univ-mlv.fr en utilisant le port TCP
+        correspondant au protocole HTTP puis tapez la requête suivante : </dt>
+      <code>GET /ens/ HTTP/0.9</code>
+      <dd>Header de la réponse:</dd>
+      <code>
+        HTTP/1.1 200 OK<br>
+        Date: Thu, 28 Nov 2019 09:08:15 GMT<br>
+        Server: Apache<br>
+        Content-Length: 2957<br>
+        Connection: close<br>
+        Content-Type: text/html; charset=UTF-8
+      </code>
+    </li>
+    <li>
+      <dt>A quoi correspondent les 3 valeurs sur la première ligne de l'entête ?</dt>
+      <dd>
+        La première ligne signifie que la requête s’est bien déroulée, on y voit le protocole, sa version et le code de retour de la requête.
+        <br>
+        La deuxième ligne est la date à laquelle la requête à été lancée.
+        <br>
+        La troisième est le nom du serveur web utilisé.
+      </dd>
+    </li>
+    <li>
+      <dt>Quel est le nom du serveur Web ?</dt>
+      <dd>Le nom du serveur web est Apache, le plus utilisé.</dd>
+    </li>
+    <li>
+      <dt>A quoi correspond la valeur de Content-Type ?</dt>
+      <dd>La valeur du content-type correspond au type de fichier auquel on accède ainsi que l’encodage des caractères sur le dit fichier.</dd>
+    </li>
+    <li>
+      <dt>A quoi correspond la valeur de Content-Length ? </dt>
+      <dd>La valeur du content-length correspond à la taille du fichier auquel on accède.</dd>
+    </li>
+    <li>
+      <dt>Faites la même analyse mais avec la requête:</dt>
+      <code>GET /ens/toto.txt HTTP/0.9</code>
+      <dd>Réponse:</dd>
+      <code>
+        HTTP/1.1 404 Not Found <br>
+        Date: Thu, 28 Nov 2019 10:09:16 GMT <br>
+        Server: Apache <br>
+        Connection: close <br>
+        Content-Type: text/html
+      </code>
+      <dd>La page est inexistante</dd>
+    </li>
+    <li>
+      <dt>Enfin, faites la même analyse avec la requête:</dt>
+      <code>GET /index.html HTTP/0.9</code>
+      <dd>Réponse:</dd>
+      <code>
+        HTTP/1.1 302 Found <br>
+        Date: Thu, 28 Nov 2019 10:10:12 GMT <br>
+        Server: Apache <br>
+        Location: http://igm.u-pem.fr/index.html <br>
+        Content-Length: 279 <br>
+        Connection: close <br>
+        Content-Type: text/html; charset=iso-8859-1
+      </code>
+      <dd>La page a été déplacée</dd>
+    </li>
+  </ol>
+</body>
+
+</html>

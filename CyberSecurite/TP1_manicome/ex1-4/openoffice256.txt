@@ -1,0 +1,1 @@
+SHA256(Apache_OpenOffice-SDK_4.1.3_Linux_x86-64_install-deb_en-US.tar.gz)= 8ab7b7ee44d718a41ddeb3c3b409022ea2e9a00e35a012e3f3f66e97def2a8cc

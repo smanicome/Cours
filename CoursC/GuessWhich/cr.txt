@@ -1,0 +1,5 @@
+worked on:
+	random generator
+	garbage value (make variable 0 before using it)
+	lazy tests (test if '\0' BEFORE)
+	test on chars (isdigit)

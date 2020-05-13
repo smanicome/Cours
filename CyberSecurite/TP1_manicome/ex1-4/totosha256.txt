@@ -1,0 +1,1 @@
+SHA256(toto.txt)= a092afb169082d8de98fa9f0e23ed21637a7a841c4f40e7808cc1dcc6ca668db

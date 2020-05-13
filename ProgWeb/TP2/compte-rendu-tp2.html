@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        html {
+            font-family: sans-serif;
+        }
+        /*h1 {
+            font-size: 24;
+        }
+        h2 {
+            font-size: 18;
+            color: blue;
+        }*/
+        h3 {
+            font-size: 16;
+        }
+        .centered {
+            text-align: center;
+        }
+        .right {
+            text-align: right;
+        }
+        a {
+            color: green;
+        }
+        a:hover {
+            color: teal;
+        }
+    </style>
+    <link rel="stylesheet" href="./compte-rendu-tp2.css">
+    <title>TP2</title>
+</head>
+<body>
+    <header>
+        <h1 class="centered">MANICOME Compte Rendu de TP2</h1>
+        <h2 class="centered" style="color: teal; padding: 1em;">Feuille de Style, boite et inline</h2>
+    </header>
+
+    <h2 class="centered" style="color:orange; margin-top: 0;">Exercice 1 - Style de base</h2>
+    <ol>
+        <li>
+            <dt>
+                Ajoutez en utilisant la balise &lt;h2&gt; le titre de l'exercice courant 
+                puis ajoutez à la balise h2 un attribut style qui permet de mettre le 
+                titre de l'exercice en orange.
+            </dt>
+        </li>
+        <li>
+            <dt>
+                Déclarez une balise style à l'intérieur des balises head du document, 
+                puis faites en sorte que tout le document utilise une police sans-serif.
+            </dt>
+            <dd>
+                <code>
+                    &lt;style&gt; <br>
+                        &emsp;html { <br>
+                            &emsp;&emsp;font-family: sans-serif; <br>
+                        &emsp;} <br>
+                    &lt;/style&gt;
+                </code>
+            </dd>
+        </li>
+        <li>
+            <dt>
+                Faites en sorte que la balise h1 corresponde à une police de 24 points, 
+                la balise h2 à une police de 18 points et la balise h3 à une police 16 points. 
+            </dt>
+            <dd>
+                <code>
+                    h1 {<br>
+                        &emsp;font-size: 24; <br>
+                    } <br><br>
+                    h2 { <br>
+                        &emsp;font-size: 18; <br>
+                    } <br><br>
+                    h3 { <br>
+                        &emsp;font-size: 16; <br>
+                    }
+                </code>
+            </dd>
+        </li>
+        <li>
+            <dt>
+                Faites en sorte que les balises h2 soient affichées en bleu, 
+                à part le titre de cet exercice (qui doit rester en orange).
+            </dt>
+            <dd>
+                <code>
+                    h2 { <br>
+                        &emsp;font-size: 18; <br>
+                        &emsp;color: blue; <br>
+                    } <br>
+                    ... <br>
+                    &lt;h2 style="color:orange"&gt;Exercice 1 - Style de base&lt;/h2&gt;
+                </code>
+            </dd>
+        </li>
+        <li>
+            <dt>
+                Faites en sorte que le titre du compte rendu de TP soit centré.
+                Pour cela, vous allez créer une classe "centered" et ajouter un attribut class à la balise englobant le titre du compte rendu. 
+                Déclarez ensuite que le style pour la classe "centered" est centré. 
+            </dt>
+            <dd>
+                <code>
+                    .centered { <br>
+                        &emsp;text-align: center; <br>
+                    } <br>
+                    ... <br>
+                    &lt;h2 class="centered" style="color:orange"&gt;Exercice 1 - Style de base&lt;/h2&gt;
+                </code>
+            </dd>
+        </li>
+        <li>
+            <dt>
+                On veut que votre nom soit aligné à droite. Commencez par déclarer votre nom entre des balises div 
+                puis ajoutez une classe right permettant d'aligner le texte à droite. 
+            </dt>
+            <dd>
+                <div class="right">MANICOME</div>
+                <code>
+                    .right { <br>
+                        &emsp;text-align: right; <br>
+                    } <br>
+                    ... <br>
+                    &lt;div class="right"&gt;MANICOME&lt;/div&gt;
+                </code>
+            </dd>
+        </li>
+        <li>
+            <dt>
+                Ajoutez un lien vers le cours http://forax.github.io/course/progweb/ puis faites en sorte que le lien 
+                soit en vert si la souris n'est pas sur le lien et en teal si la souris survole le lien. 
+            </dt>
+            <dd>
+                <a href="http://forax.github.io/course/progweb/">http://forax.github.io/course/progweb/</a>
+                <code>
+                    a { <br>
+                        &emsp;color: green; <br>
+                    } <br><br>
+                    a:hover { <br>
+                        &emsp;color: teal; <br>
+                    } <br>
+                    ... <br>
+                    &lt;a href="http://forax.github.io/course/progweb/"&gt;http://forax.github.io/course/progweb/&lt;/a&gt;
+                </code>
+            </dd>
+        </li>
+    </ol>
+
+    <h2 class="centered">Exercice 2 - Style de liste et de table</h2>
+    <ol>
+        <li></li>
+        <li>
+            <dt>
+                Pour la suite du TP, nous ne modifierons plus la balise style du compte rendu mais le fichier compte-rendu-tp3.css
+                Faites en sorte que la liste des questions de cet exercice et de l'exercice précédent utilise les chiffres romains 
+                (en minuscule) plutôt que les traditionnels chiffres 1, 2, 3, etc. 
+            </dt>
+            <dd>
+                <code>
+                    ol { <br>
+                        &emsp;list-style-type: lower-roman; <br>
+                    }
+                </code>
+            </dd>
+        </li>
+        <li>
+            <dt>
+                Le site https://en.wikipedia.org/wiki/List_of_2018_box_office_number-one_films_in_the_United_States contient un tableau des films au box office.
+                On souhaite recopier les données (en fait, uniquement le rang, le titre du film et les recettes actuelles) pour les 5 films ayant 
+                rapporté le plus d'argent (il y a des flèches pour trier) pour les mettre dans une table dont nous allons changer l'aspect.
+                Donc dans un premier temps, créez la table HTML en utilisant les balises table, th et td dans votre compte rendu. 
+            </dt>
+            <dd>
+                <table>
+                    <thead>
+                        <th>#</th>
+                        <th>Titre</th>
+                        <th>Recettes</th>
+                    </thead>
+                    <tr>
+                        <td>17</td>
+                        <td>Avengers: Endgame</td>
+                        <td>$357,115,007</td>
+                    </tr>
+                    <tr>
+                        <td>29</td>
+                        <td>The Lion King</td>
+                        <td>$191,770,759</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Captain Marvel</td>
+                        <td>$153,433,423</td>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td>Avengers: Endgame</td>
+                        <td>$147,383,211</td>
+                    </tr>
+                    <tr>
+                        <td>47</td>
+                        <td>Frozen II</td>
+                        <td>$130,263,358</td>
+                    </tr>
+                </table>
+            </dd>
+        </li>
+        <li>
+            <dt>
+                Faites en sorte que la table occupe toute la largeur du compte rendu. 
+            </dt>
+            <dd>
+                <code>
+                    table { <br>
+                        &emsp;width: 100%; <br>
+                    }
+                </code>
+            </dd>
+        </li>
+        <li>
+            <dt>
+                Centrez les titres et changer la police de caractères des titres 
+                pour utiliser des petites majuscules (small caps).
+            </dt>
+            <dd>
+                <code>
+                    thead { <br>
+                        &emsp;text-align: center; <br>
+                        &emsp;font-variant: small-caps; <br>
+                    }
+                </code>
+            </dd>
+        </li>
+        <li>
+            <dt>
+                Aérez la table avec la propriété 
+                padding pour que le texte ne soit pas collé aux bordures.
+            </dt>
+            <dd>
+                <code>
+                    td { <br>
+                        &emsp;padding: 1em; <br>
+                    }
+                </code>
+            </dd>
+        </li>
+        <li>
+            <dt>
+                Faites en sorte que les valeurs des deux premières colonnes (rang et titre) soient alignées 
+                à gauche et que les valeurs de la dernière colonne soient centrées. 
+            </dt>
+            <dd>
+                <code>
+                    td:first-child, td:nth-child(2) { <br>
+                        &emsp;text-align: left; <br>
+                    } <br><br>
+                    td:last-child { <br>
+                        &emsp;text-align: right; <br>
+                    }
+                </code>
+            </dd>
+        </li>
+        <li>
+            <dt>
+                Changez la couleur de fond des lignes paires (even) pour mettre du 
+                bleu clair en utilisant la pseudo-classe :nth-child.
+            </dt>
+            <dd>
+                Attention la balise &lt;thead&gt; n'est pas prise en compte
+                <code>
+                    tr:nth-child(even) { <br>
+                        &emsp;background-color: lightblue; <br>
+                    }
+                </code>
+            </dd>
+        </li>
+        <li>
+            <dt>
+                Faites en sorte que si l'on survole une ligne avec la souris la couleur du 
+                fond corresponde à 18 sur 255 de rouge, 28 sur 255 de vert et 80 sur 255 
+                de bleu en utilisant un codage hexadécimal.
+                Note: 26 en décimal correspond à 1A en hexadecimal car pour les dizaines, 
+                26 / 16 = 1, et pour les unités 26 - 1 * 16 = 10 (qui s'écrit 'A'). 
+            </dt>
+            <dd>
+                <code>
+                    tr:hover { <br>
+                        &emsp;background-color: #121c50; <br>
+                    }
+                </code>
+            </dd>
+        </li>
+    </ol>
+
+    <h2 class="centered">Exercice 3 - Vignettes</h2>
+    <ol>
+        <li></li>
+        <li>
+            <dt>
+                Faites en sorte que toutes les images à l'intérieur des 
+                boites (pas les autres) aient une largeur (width) de 180 pixels. 
+            </dt>
+            <dd>
+                <code>
+                    div img { <br>
+                        &emsp;width: 180px; <br>
+                    }
+                </code>
+            </dd>
+        </li>
+        <li>
+            <dt>
+                Au lieu d'afficher les images verticalement, on souhaite les afficher horizontalement.
+                Utilisez pour cela l'attribut float. 
+            </dt>
+            <dd>
+                <code>
+                    div img { <br>
+                        &emsp;width: 180px; <br>
+                        &emsp;float: left; <br>
+                    }
+                </code>
+            </dd>
+        </li>
+        <li>
+            <dt>
+                Que se passe-t-il si l'on fait varier la 
+                taille de la fenêtre du navigateur horizontalement ? 
+            </dt>
+            <dd>
+                Lorsque nous faisons varier la taille du navigateur horizontalement
+                les images s'alignent afin d'occuper au mieux l'espace disponible, quitte
+                à passer à une nouvelle ligne.
+            </dd>
+        </li>
+        <li>
+            <dt>
+                Vérifiez que vous pouvez aussi mettre toutes les images à droite en 
+                changeant juste un mot dans la partie CSS du document.
+                Puis remettez les images alignées à gauche. 
+            </dt>
+            <dd>
+                <code>
+                    div img { <br>
+                        &emsp;width: 180px; <br>
+                        &emsp;float: right; <br>
+                    }
+                </code>
+            </dd>
+        </li>
+        <li>
+            <dt>
+                Faites en sorte que les titres (animal1, animal2, etc.) soient 
+                affichés en blanc sur fond noir et soient centrés horizontalement par rapport 
+                à la boite qui les contient.
+                Jouez de plus avec la propriété padding pour avoir un espacement convenable. 
+            </dt>
+            <dd>
+                <code>
+                    div div { <br>
+                        &emsp;padding-top: 5px; <br>
+                        &emsp;padding-bottom: 5px; <br>
+                        &emsp;background-color: black; <br>
+                        &emsp;color: white; <br>
+                        &emsp;text-align: center; <br>
+                      }
+                </code>
+            </dd>
+        </li>
+        <li>
+            <dt>
+                Espacez les unes des autres les boites contenant les images avec la propriété margin. 
+            </dt>
+            <dd>
+                <code>
+                    div { <br>
+                        &emsp;... <br>
+                        &emsp;margin: 1em; <br>
+                    } <br>
+                    div div { <br>
+                        &emsp;... <br>
+                        &emsp;margin: 0; <br>
+                    }
+                </code>
+            </dd>
+        </li>
+        <li>
+            <dt>
+                Faites en sorte que les images à l'intérieur des boites aient 
+                une bordure d'un pixel de largeur de couleur #aaaaaa. 
+            </dt>
+            <dd>
+                <code>
+                    div img { <br>
+                        &emsp;width: 180px; <br>
+                        &emsp;border: solid #aaaaaa; <br>
+                        &emsp;border-width: 1px; <br>
+                    }
+                </code>
+            </dd>
+        </li>
+        <li>
+            <dt>
+                Changez l'opacité (propriété opacity) lorsque l'utilisateur 
+                passe sa souris au-dessus d'une image dans une boite.
+            </dt>
+            <dd>
+                <code>
+                    div img:hover { <br>
+                        &emsp;opacity: 0.5; <br>
+                    }
+                </code>
+            </dd>
+        </li>
+        <li>
+            <dt>
+                Faites en sorte que les titres soient accolés par le bas à l'image 
+                et mordent légèrement sur l'image (de 5 pixels par exemple). 
+            </dt>
+            <dd>
+                <code>
+                    div { <br>
+                        &emsp;... <br>
+                        &emsp;position: relative; <br>
+                    } <br><br>
+                    div div { <br>
+                        &emsp;... <br>
+                        &emsp;top: -5px; <br>
+                    }
+                </code>
+            </dd>
+        </li>
+    </ol>
+
+    <h2 class="centered">Exercice 4 - Barre de menu</h2>
+    <ol>
+        <li>
+            <dt>
+                Faites en sorte que la liste ait une position fixe, 
+                en haut à gauche de la partie affichage du navigateur. 
+            </dt>
+            <dd>
+                <code>
+                    ul { <br>
+                        &emsp;position: fixed; <br>
+                        &emsp;top: 0; <br>
+                    }
+                </code>
+            </dd>
+        </li>
+        <li>
+            <dt>
+                Retirez le style par défaut des items de 
+                liste (avec list-style-type) pour qu'il n'y ait pas de style par défaut. 
+            </dt>
+            <dd>
+                <code>
+                    li { <br>
+                        &emsp;list-style-type: none; <br>
+                    }
+                </code>
+            </dd>
+        </li>
+        <li>
+            <dt>
+                Affichez les items en gras et avec une police Arial (ou sinon sans-serif). 
+            </dt>
+            <dd>
+                <code>
+                    li { <br>
+                        &emsp;... <br>
+                        &emsp;font-weight: bold; <br>
+                        &emsp;font-family: Arial, Helvetica, sans-serif; <br>
+                    }
+                </code>
+            </dd>
+        </li>
+        <li>
+            <dt>
+                Faites en sorte que les items soient 
+                affichés horizontalement collés à gauche et non plus verticalement. 
+            </dt>
+            <dd>
+                <code>
+                    li { <br>
+                        &emsp;... <br>
+                        &emsp;float: left; <br>
+                    }
+                </code>
+            </dd>
+        </li>
+        <li>
+            <dt>
+                Faites en sorte que les items aient une largeur de 100 pixels 
+                et ajoutez un espacement d'une dizaine de pixel entre les items. 
+            </dt>
+            <dd>
+                <code>
+                    li { <br>
+                        &emsp;... <br>
+                        &emsp;width: 100px; <br>
+                        &emsp;margin: 10px; <br>
+                    }
+                </code>
+            </dd>
+        </li>
+        <li>
+            <dt>
+                Changez le fond du menu pour qu'il soit de couleur jaune (yellow), en chantant yellow submarine, 
+                et changez la couleur des items pour qu'ils soient gris foncés. 
+            </dt>
+            <dd>
+                <code>
+                    ul { <br>
+                        &emsp;... <br>
+                        &emsp;background-color: yellow; <br>
+                    } <br><br>
+                    li { <br>
+                        &emsp;... <br>
+                        &emsp;color: darkgray <br>
+                    }
+                </code>
+            </dd>
+        </li>
+        <li>
+            <dt>
+                Fixez la hauteur (height) du menu à 50 pixels 
+                puis faites en sorte que le menu occupe toute la largeur (width). 
+            </dt>
+            <dd>
+                <code>
+                    ul { <br>
+                        &emsp;... <br>
+                        &emsp;height: 50px; <br>
+                        &emsp;width: 100%; <br>
+                    }
+                </code>
+            </dd>
+        </li>
+        <li>
+            <dt>
+                Faites en sorte que l'item 'About' soit affiché à droite de la barre de menu. 
+            </dt>
+            <dd>
+                <code>
+                    li:last-child { <br>
+                        &emsp;float: right; <br>
+                    }
+                </code>
+            </dd>
+        </li>
+        <li>
+            <dt>
+                Affichez une ligne de 2 pixels en bas du menu. 
+            </dt>
+            <dd>
+                <code>
+                    ul { <br>
+                        &emsp;border-bottom: solid; <br>
+                        &emsp;border-width: 2px; <br>
+                    }
+                </code>
+            </dd>
+        </li>
+    </ol>
+
+    <h2 class="centered">Exercice 5 - Faire un sous-menu (Optionnel)</h2>
+    <ol>
+        <li>
+            <dt>
+                Positionnez le sous-menu juste en dessous de l'item web (avec relative/absolute). 
+            </dt>
+            <dd>
+                <code>
+                    ul ul { <br>
+                        &emsp;position: relative; <br>
+                        &emsp;top: 25px; <br>
+                    }
+                </code>
+            </dd>
+        </li>
+        <li>
+            <dt>
+                Utilisez la propriété display pour ne pas afficher le sous-menu par défaut. 
+            </dt>
+            <dd>
+                <code>
+                    ul ul { <br>
+                        &emsp;... <br>
+                        &emsp;display:none; <br>
+                    }
+                </code>
+            </dd>
+        </li>
+        <li>
+            <dt>
+                Faites en sorte d'afficher le sous-menu si l'on passe la souris sur l'item 'Web'. 
+            </dt>
+            <dd>
+                <code>
+                    ul li:hover ul { <br>
+                        &emsp;display: block; <br>
+                    }
+                </code>
+            </dd>
+        </li>
+        <li>
+            <dt>
+                N'oubliez pas de jouer avec la propriété z-index 
+                pour mettre le sous menu au-dessus du reste de la page. 
+            </dt>
+            <dd>
+                <code>
+                    ul ul { <br>
+                        &emsp;... <br>
+                        &emsp;z-index: 9999; <br>
+                      }
+                </code>
+            </dd>
+        </li>
+    </ol>
+</body>
+</html>

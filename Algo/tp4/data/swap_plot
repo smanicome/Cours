@@ -1,0 +1,7 @@
+set output "swap.ps"
+set terminal postscript color "landscape"
+set title "nombre de swap"
+
+plot \
+"insert_sort.dat" using 1:3 title "tri par insertion" with lines linetype 1, \
+"select_sort.dat" using 1:3 title "tri par selection" with lines linetype 2

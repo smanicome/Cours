@@ -1,0 +1,26 @@
+1. 
+	Le type de la variable dynamique s est défini au moment de la compilation, étant donné 
+	quelle est initialisé avec une chaîne de caractère, son type devient String.
+	Une fois que le compilateur 'a deviné' sont type, la variable est donc par la suite typée, 
+	dans notre cas un String contenant la méthode length.
+
+2.
+	s1 == s2 renvoit true ou 1 car s1 et s2 référent au même objet.
+	s1 == s3 renvoit false ou 0 car la méthode == sur deux String compare leurs références en tant
+	qu'objet et non leurs valeurs. 
+
+3.
+	Pour copmparer leurs valeurs on utilise la .méthode equals de la classe.
+	s4.equals(s5)
+
+4.
+	Lors de la compilation, le compilateur conserve une référence unique vers le
+	String contenant "toto", cette référence est alors stockée dans s6 et s7.
+
+5.
+	Les String en Java sont immutables car ils sont partagés, réduisant les risques où  la modification
+	d'une instance impacte une autre.
+
+6.
+	La méthode toUpperCase renvoie la valeur contenue dans s8 en capitalisant chaque caractère.
+	En aucun cas elle ne modifie la valeur contenue.

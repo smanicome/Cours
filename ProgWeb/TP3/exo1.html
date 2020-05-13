@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script>
+    "use strict";
+    var canvas;
+    var context;
+
+
+    function refresh() {
+      let date = new Date();
+      var str = date.getHours() + "h " + date.getMinutes() + "m " + date.getSeconds() + "s";
+      console.log(str);
+    }
+
+    function loaded() {
+      canvas = document.getElementById('clock');
+      context = canvas.getContext("2d");
+      window.setInterval(drawClock, 1000);
+      window.setInterval(refresh, 1000);
+    }
+
+    function drawClock() {
+      let secRad, minRad, hourRad;
+      let date = new Date();
+      context.clearRect(0, 0, 600, 600);
+
+      context.strokeStyle = "blue";
+      context.lineWidth = 2; 
+      context.beginPath();
+      context.arc(300, 300, 300, 0, 2*Math.PI);
+      context.closePath();
+      context.stroke();
+
+      secRad = ((2*Math.PI)/60) * date.getSeconds() - Math.PI/2;
+      drawLine(secRad, 275, 2, "red", 300, 300);
+      minRad = ((2*Math.PI)/60) * date.getMinutes() - Math.PI/2;
+      drawLine(minRad, 275, 4, "black", 300, 300);
+      hourRad = ((2*Math.PI)/12) * date.getHours() - Math.PI/2;
+      drawLine(hourRad, 200, 6, "teal", 300, 300);
+
+      for(let i=0; i<12; i++) {
+        let pos = ((2*Math.PI)/12) * i - Math.PI/2;
+        let startx = 300 + 300*Math.cos(pos);
+        let starty = 300 + 300*Math.sin(pos);
+        drawLine(pos, -30, 3, "black", startx, starty);
+        //Une longueur de 3px est invisible donc j'ai mis 30
+      }
+    }
+
+    function drawLine(time, size, width, color, startx, starty) {
+      let x,y;
+      x = startx + size*Math.cos(time);
+      y = starty + size*Math.sin(time);      
+
+      context.strokeStyle = color;
+      context.lineWidth = width; 
+      context.beginPath();
+      context.moveTo(startx, starty);
+      context.lineTo(x, y);
+      context.closePath();
+      context.stroke();
+    }
+
+    window.onload = loaded;
+
+
+  </script>
+</head>
+
+<body>
+  <h2>Horloge</h2>
+  <canvas id="clock" width="600" height="600">
+  </canvas>
+</body>
+
+</html>

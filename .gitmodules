@@ -1,0 +1,3 @@
+[submodule "CoursC/Alchemist"]
+	path = CoursC/Alchemist
+	url = https://github.com/smanicome/alchemist.git

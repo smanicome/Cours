@@ -1,0 +1,6 @@
+set output "selection_sort.ps"
+set terminal postscript color "landscape"
+set title "nombre de comparaisons de selection_sort"
+
+plot \
+"selection_sort.dat" using 1:2 title "tri par selection" with lines linetype 1

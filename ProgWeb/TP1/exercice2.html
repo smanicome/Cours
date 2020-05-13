@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Exercice 2</title>
+  <link rel="stylesheet" type="text/css" href="tp1.css" media="screen" />
+</head>
+
+<body>
+  <header>
+    <h1>MANICOME Compte Rendu de TP1</h1>
+    <nav>
+      <a href="./tp1.html">Exercice 1</a>
+      <a href="#">Exercice 2</a>
+      <a href="./exercice3.html">Exercice 3</a>
+      <a href="./exercice4.html">Exercice 4</a>
+      <a href="./exercice5.html">Exercice 5</a>
+      <a href="./conclusion.html">Conclusion personnelle</a>
+    </nav>
+    <h2>Exercice 2 - Uniform Resource Locator</h2>
+  </header>
+
+  <ol>
+    <li>
+      <dt>Quel est le nom de la machine à laquelle vous accédez ?</dt>
+      <dt>Quel est le nom de domaine auquel vous accédez ? </dt>
+      <dd>A ce <a href="http://monge.univ-mlv.fr/ens/">lien</a> on accède à la machine monge, au domaine
+        univ-mlv.fr</dd>
+    </li>
+    <li>
+      <code>host www.w3.org</code>
+      <dt>À quoi correspond la première ligne de la réponse ?</dt>
+      <dt>À quoi correspond la seconde ligne de la réponse ? </dt>
+      <dd>La première ligne représente l’adresse IPv4, la seconde est l’adresse IPv6 de la machine.</dd>
+    </li>
+    <li>
+      <dt>A votre avis, pourquoi utilise-t-on des noms pour les machines plutôt que des adresses IP ? </dt>
+      <dd>On utilise des noms de domaine car il est plus simple de trouver un site avec un nom décrivant son contenu ou sa nature qu’avec une suite de chiffres.</dd>
+    </li>
+    <li>
+      <dt>Que se passe-t-il si on essaye d'accéder à la page du cours dans le browser en remplaçant le nom de la machine par l'adresse IP trouvée précédemment ? </dt>
+      <dd>Le nom de domaine du site du cours renvoie vers une seule adresse, on peut donc y accéder avec cette dernière.</dd>
+      <dd>Le nom de domaine de <a href="forax.github.io">forax.github.io</a> renvoie sur plusieurs adresses différentes.
+      On ne peut pas y accéder de la même manière.
+      </dd>
+    </li>
+    <li>
+      <dt>Exécutez la commande traceroute sur l'adresse IP de la machine forax.github.io. Qu'affiche cette commande ? </dt>
+      <dd>La commande traceroute affiche le chemin que traversent les paquets jusqu’à la machine host.</dd> <br>
+      <dt>Quel est le nom du routeur de sortie (le premier que vous rencontrez) ?</dt>
+      <dd>Le routeur de sortie est gwetud.u-pem.fr.</dd><br>
+      <dt>Comment s'appelle le réseau sur lequel est connecté l'université ?</dt>
+      <dd>L'université est connectée au réseau renater.fr.</dd>
+    </li>
+    <li>
+      <dt>
+        Quel sont les noms de domaine associés aux machines suivantes ? <br>
+        En utilisant la commande whois dans un terminal, trouvez quelle est la ville (sur terre) de l'hébergeur de cette organisation. <br>
+        Puis faites un ping sur la machine. Les temps affichés vous semble-t'il corrects ? 
+      </dt> <br>
+      <dt>www.mai-ko.com</dt>
+      <dd>L’hébergeur de mai-ko.com est situé à Osaka au Japon. Registrant City: Osaka
+          Le ping est long mais cela est normal étant donné la distance nous séparant du Japon.</dd> <br>
+      <dt>forax.github.io</dt>
+      <dd>L’hébergeur de forax.github.io est situé à San Francisco aux Etats-Unis, le ping est court.
+         L'attente avant de recevoir un réponse varie avec la distance parcourue</dd>
+      
+    </li>
+  </ol>
+</body>
+
+</html>

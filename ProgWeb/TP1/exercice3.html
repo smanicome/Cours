@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Exercice 3</title>
+  <link rel="stylesheet" type="text/css" href="tp1.css" media="screen" />
+</head>
+
+<body>
+  <header>
+    <h1>MANICOME Compte Rendu de TP1</h1>
+    <nav>
+      <a href="./tp1.html">Exercice 1</a>
+      <a href="./exercice2.html">Exercice 2</a>
+      <a href="#">Exercice 3</a>
+      <a href="./exercice4.html">Exercice 4</a>
+      <a href="./exercice5.html">Exercice 5</a>
+      <a href="./conclusion.html">Conclusion personnelle</a>
+    </nav>
+    <h2>Exercice 3 - Perroquet, quelle heure est-il ?</h2>
+  </header>
+
+  <ol>
+    <li>
+      <dt>On cherche à savoir à quoi correspond le fichier /etc/services.</dt>
+      <dd>Le fichier /etc/services contient un libellé des services internet avec les ports et protocoles utilisés.</dd>
+    </li>
+    <li>
+      <dt>Rappelez ce que fait la commande grep.
+        Utilisez la commande grep pour déterminer le numéro du port TCP correspondant au service echo. </dt>
+      <dd>La commande grep permet de rechecher dans un fichier une suite de caractères passée en argument</dd>
+      <dd>La commande grep echo /etc/services renvoie le port 7 pour le protocole TCP de la commande echo.</dd>
+      <code>
+          saravanane@PC:~$ grep echo /etc/services<br>
+          echo		7/tcp<br>
+          echo		7/udp          
+      </code>
+    </li>
+    <li>
+      <dt>Utilisez la commande nc pour tester le service echo sur la machine gaspard.univ-mlv.fr.</dt>
+      <code>
+        saravanane@PC:~$ nc gaspard.univ-mlv.fr 7<br>
+        Perroquet<br>
+        Perroquet
+      </code>
+    </li>
+    <li>
+      <dt>Faites la même manipulation avec le service daytime toujours sur la machine gaspard.univ-mlv.fr.
+          Comment interpréter la réponse de la machine ?</dt>
+      <dd>Le résultat correspond à l’heure de la machine à laquelle on accéder au moment de la requête</dd>
+      <code>
+          saravanane@PC:~$ grep daytime /etc/services<br>
+          daytime		13/tcp<br>
+          saravanane@PC:~$ nc gaspard.univ-mlv.fr 13<br>
+          27 NOV 2019 17:12:35 CET
+      </code>
+    </li>
+    <li>
+      <dt>Enfin, quel est le port TCP correspondant au service HTTP ? </dt>
+      <dd>Le port TCP correspondant au service HTTP est le 80.</dd>
+      <code>
+          saravanane@PC:~$ grep HTTP /etc/services<br>
+          http		80/tcp		www		# WorldWideWeb HTTP          
+      </code>
+    </li>
+  </ol>
+</body>
+
+</html>

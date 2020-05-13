@@ -1,0 +1,8 @@
+Exercice 6
+	6. Les complexité de enqueue_q et dequeue sont O(1), il n'y a aucun parcourt de tableau, aucune
+	récursivité, on accède directement à la valeur souhaitée.
+
+Exercice 7
+	7. La complexité de dequeue_pq est O(1) car on accède directement au premier élément
+	   de la liste.
+	   La complexité de enqueue_pq est au pire O(n) car on parcourt la liste une fois.

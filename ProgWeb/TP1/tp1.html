@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Exercice 1</title>
+  <link rel="stylesheet" type="text/css" href="tp1.css" media="screen" />
+</head>
+
+<body>
+  <header>
+    <h1>MANICOME Compte Rendu de TP1</h1>
+    <nav>
+      <a href="#">Exercice 1</a>
+      <a href="./exercice2.html">Exercice 2</a>
+      <a href="./exercice3.html">Exercice 3</a>
+      <a href="./exercice4.html">Exercice 4</a>
+      <a href="./exercice5.html">Exercice 5</a>
+      <a href="./conclusion.html">Conclusion personnelle</a>
+    </nav>
+    <h2>Exercice 1 - Document HTML de base</h2>
+  </header>
+
+  <ol>
+    <li>
+      <dt>Que manque t'il comme information à la balise head pour que le fichier s'affiche correctement ?</dt>
+      <dd>Pour afficher les caractères spécifiques il faut prendre soin d’ajouter une balise de métadonnées permettant
+        de spécifier l’encodage des caractères, ici UTF-8</dd>
+      <dd><code>&lt;meta charset="UTF-8"&gt;</code></dd>
+    </li>
+    <li>
+      <dt>A quoi servent les tags h1, h2 et h3 ?</dt>
+      <dd>Les tags h1, h2 et h3 permettent de définir les titres de sections, avec un style prédéfini</dd>
+    </li>
+    <li>
+      <dt>A quoi sert le tag p ?</dt>
+      <dd>Le tag p contient un paragraphe, un bloc de texte.</dd>
+    </li>
+    <li>
+      Les tags HTML commencent par une balise ouvrante &lt;foo&gt; et finissent par une balise fermante &lt;/foo&gt;
+    </li>
+    <li>
+      <dt>Comment mettre en <strong>gras</strong> ou en <i>italique</i> ?
+      <dt>
+      <dd>Les balises &lt;b&gt; ou &lt;strong&gt; permettent de mettre le texte à l’intérieur en gras, pour mettre en
+        italique il faut utiliser la balise &lt;i&gt;</dd>
+    </li>
+    <li>
+      <dt>Et comment faire pour mettre un mot à la fois en gras et en italique ?</dt>
+      <dd>Pour les deux simultanément on imbrique les balises</dd>
+    </li>
+    <li>
+      <dt>On souhaite que le titre de la fenêtre du navigateur soit "Compte Rendu de TP1", comment faire ? </dt>
+      <dd>Dans la balise &lt;head&gt; on ajoute la balise &lt;title&gt; qui contiendra le texte à afficher comme titre
+        de l’onglet du navigateur.</dd>
+      <dd><code>
+            &lt;head&gt;<br>
+              &lt;meta charset="UTF-8"&gt;<br>
+              &lt;title&gt;Index&lt;/title&gt;<br>
+            &lt;/head&gt;
+          </code>
+      </dd>
+    </li>
+    <li>
+      <dt>Ajoutez un lien (le tag A) vers le cours avec comme titre cours de programmation web. </dt>
+      <dd><a href="http://forax.github.io/course/progweb/#/">Cours de programmation web</a></dd>
+    </li>
+    <li><img src="./mon_super_arbre.jpg" height=500 width=500 alt="Arborescence de la page"></li>
+  </ol>
+  ...
+</body>
+
+</html>

@@ -1,0 +1,284 @@
+Saravanane MANICOME
+
+Exercice 1
+
+  Question 1
+
+blake2b512: Génére une empreinte de taille 512 bits, succésseur de BLAKE-512
+      
+blake2s256: Génére une empreinte de taille 256 bits, succésseur de BLAKE-256          
+
+gost: Génére une empreinte de taille 256 bits              
+
+md4: Génére une empreinte de taille 128 bits               
+
+md5: Génére une empreinte de taille 128 bits, version ameliorée de MD4             
+
+rmd160: Génére une empreinte de taille 128 bits          
+
+sha1: Génére une empreinte de taille 160 bits              
+
+sha224: Génére une empreinte de taille 224 bits            
+
+sha256: Génére une empreinte de taille 256 bits            
+
+sha3-224: Génére une empreinte de taille 224 bits          
+
+sha3-256: Génére une empreinte de taille 256 bits          
+
+sha3-384: Génére une empreinte de taille 384 bits          
+
+sha3-512: Génére une empreinte de taille 512 bits          
+
+sha384: Génére une empreinte de taille 384 bits            
+
+sha512: Génére une empreinte de taille 512 bits            
+
+sha512-224: Génére une empreinte de taille 224 bits, empreinte tronquée de sha512       
+
+sha512-256: Génére une empreinte de taille 256 bits, empreinte tronquée de sha512          
+
+shake128: Génére une empreinte de taille 128 bits          
+
+shake256: Génére une empreinte de taille 256 bits          
+
+sm3: Génére une empreinte de taille 256 bits
+
+
+
+  Question 2
+
+MD5(toto.txt)= ce479bd5bb672eebf6e5bd6f3164e46b
+SHA1(toto.txt)= f7b3dc2e9740a3d8164d12e8a78e93c45598f811
+SHA256(toto.txt)= a092afb169082d8de98fa9f0e23ed21637a7a841c4f40e7808cc1dcc6ca668db
+SHA512(toto.txt)= abe68c9fb5239769b62e0cbb7b5d05e9ddb7f65f8d3c1cc7f723f7016462293612ccddd8b8fc91f47f37e1fe759470239b8e271b62308bac21be615f3808b6e4
+
+
+  Question 3
+
+MD5: 128 bits
+SHA1: 160 bits
+SHA256: 256 bits
+SHA512: 512 bits
+
+
+  Question 4
+
+MD5(toto.txt)= c67b9f03f6861c667395a8a952e001dd
+SHA1(toto.txt)= 0435b743eb3bc9f60b991d95a8fcd1a05eb23eb4
+SHA256(toto.txt)= f05041aee5fd8abad058e92f4fd057cdbc624f2ab6543394e99c3e5286151e93
+SHA512(toto.txt)= 8dae13c37e2a3ab06d4c00883bb572a02c574551bbceeada8f1f0b0b553b86f8672bcb0f0e524deb9eca2a617ab290b0e0d04dc52d2f3261f1a5064ff238294f
+
+Les empreintes sont totalement différentes.
+
+
+  Question 5
+
+8ab7b7ee44d718a41ddeb3c3b409022ea2e9a00e35a012e3f3f66e97def2a8cc openssl
+8ab7b7ee44d718a41ddeb3c3b409022ea2e9a00e35a012e3f3f66e97def2a8cc empreinte téléchargée
+
+Les empreintes sont identiques. L'archive téléchargée est bien celle qui à été upload. L'empreinte générée dépend uniquement du contenu du fichier.
+
+
+
+Exercice 2
+
+  Question 1
+
+aes-128-cbc       aes-128-ecb       aes-192-cbc       aes-192-ecb       
+aes-256-cbc       aes-256-ecb       aria-128-cbc      aria-128-cfb      
+aria-128-cfb1     aria-128-cfb8     aria-128-ctr      aria-128-ecb      
+aria-128-ofb      aria-192-cbc      aria-192-cfb      aria-192-cfb1     
+aria-192-cfb8     aria-192-ctr      aria-192-ecb      aria-192-ofb      
+aria-256-cbc      aria-256-cfb      aria-256-cfb1     aria-256-cfb8     
+aria-256-ctr      aria-256-ecb      aria-256-ofb      base64            
+bf                bf-cbc            bf-cfb            bf-ecb            
+bf-ofb            camellia-128-cbc  camellia-128-ecb  camellia-192-cbc  
+camellia-192-ecb  camellia-256-cbc  camellia-256-ecb  cast              
+cast-cbc          cast5-cbc         cast5-cfb         cast5-ecb         
+cast5-ofb         des               des-cbc           des-cfb           
+des-ecb           des-ede           des-ede-cbc       des-ede-cfb       
+des-ede-ofb       des-ede3          des-ede3-cbc      des-ede3-cfb      
+des-ede3-ofb      des-ofb           des3              desx              
+rc2               rc2-40-cbc        rc2-64-cbc        rc2-cbc           
+rc2-cfb           rc2-ecb           rc2-ofb           rc4               
+rc4-40            seed              seed-cbc          seed-cfb          
+seed-ecb          seed-ofb          sm4-cbc           sm4-cfb           
+sm4-ctr           sm4-ecb           sm4-ofb  
+
+
+  Question 2
+
+openssl enc -aes-128-cbc -out toto.txt.enc -in toto.txt -p
+key=0950EEB2AEC1D78D930521FA09E920F9, 128 bits
+iv =1DD4BEE7AEF0333B48953341DE45CAF2, 128 bits
+
+
+  Question 3
+
+openssl enc -d -aes-128-cbc -out toto.txt.dec -in toto.txt.enc -p
+
+
+  Question 4
+
+Il n'y a aucune différence, le fichier n'a donc pas été modifié dans le process.
+
+  Question 5
+
+bad decrypt
+140388563468736:error:06065064:digital envelope routines:EVP_DecryptFinal_ex:bad decrypt:../crypto/evp/evp_enc.c:537:
+ 
+Le fichier toto.txt.dec existe mais a été mal déchiffré, le contenu est donc différent de toto.txt
+
+
+  Question 6
+
+openssl enc -aes-128-cbc -out toto.txt.enc -in toto.txt -iv AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA -K BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB -p
+openssl enc -d -aes-128-cbc -out toto.txt.dec -in toto.txt.enc -iv AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA -K BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB -p
+
+
+
+  Question 7
+
+openssl enc -aes-128-cbc -out image.jpg.enc -in image.jpg -p
+openssl enc -d -aes-128-cbc -out image.jpg.dec -in image.jpg.enc -p
+
+
+
+Exercice 3
+
+  Question 1
+
+-----BEGIN RSA PRIVATE KEY-----
+MIICWwIBAAKBgQDf7Kzc33Vm/F0qFELgbHMGxqMDErzlevUU5c8sSwqBtTywFQAN
+R5lB/yuwO28E59GCwwWKcJE04VVYqQtkmzdg337cs5o0L5cPqlOrJTtz9NezlqW5
+cXsYSQkmvfCl2oBKXMTOWx7iWXibhAOvyQphmm7oCky7vU9e9V90FfadpQIDAQAB
+AoGAH9ggnSiKIaMx/JH1EMVbdlM5S26WvmvF/rrPw5TIYbnMb54M69aKzP/kzqMl
+HqV4/geN+ioX/FUvNfSUUjJgpXn2OU4d4UvUAHaHksbEwI7x/Am1ZwrEqjqmR6ZH
+bLQ3PTkCzDCbCYQfD30vanu17Tqaf3emAmur6yJ1EnF4MAECQQD7GMi8YSglwTZB
+Mv6VJyg9Gtfzg3hKwJMADw/SvNggNlm3dcnxynUKgDiH9AIDNHDACnqp9Jwbq3s8
+SJ+giywlAkEA5EwPAxx/IvXQVOkLGP3miNzbwWswOfbQBC77/CXgvsuMb7DhKL8p
+3uLAsrKEYBVrrLF//tkOOb9j4KMcWsIzgQJAJ/cO5CTWngO9nez+5kCAQBGIs6KG
+P+ecvhKnoxQZli7wYqnlxY1CybQUy1bEBzyOgZJpaamcOy81AyhP996O3QJACbyA
+q2ZMucX4A5cIxSEW8uFQcfhLTz2Kc5M5ZfCLnDd8HstRXvaAJ6ROCZD5ekuPkwbi
+6ZCCPc4+yTbLn8dGgQJAOuo0IuEN+UOXA/OhIviRMCUo2e/xQRricLN8k0nIn51w
+ZgpMjhQOluqweY8ryNa2Gas/fwwnn/zFUaiJ27VT8g==
+-----END RSA PRIVATE KEY-----
+
+ 
+  Question 2
+
+RSA Private-Key: (1024 bit, 2 primes)
+modulus:
+    00:df:ec:ac:dc:df:75:66:fc:5d:2a:14:42:e0:6c:
+    73:06:c6:a3:03:12:bc:e5:7a:f5:14:e5:cf:2c:4b:
+    0a:81:b5:3c:b0:15:00:0d:47:99:41:ff:2b:b0:3b:
+    6f:04:e7:d1:82:c3:05:8a:70:91:34:e1:55:58:a9:
+    0b:64:9b:37:60:df:7e:dc:b3:9a:34:2f:97:0f:aa:
+    53:ab:25:3b:73:f4:d7:b3:96:a5:b9:71:7b:18:49:
+    09:26:bd:f0:a5:da:80:4a:5c:c4:ce:5b:1e:e2:59:
+    78:9b:84:03:af:c9:0a:61:9a:6e:e8:0a:4c:bb:bd:
+    4f:5e:f5:5f:74:15:f6:9d:a5
+publicExponent: 65537 (0x10001)
+privateExponent:
+    1f:d8:20:9d:28:8a:21:a3:31:fc:91:f5:10:c5:5b:
+    76:53:39:4b:6e:96:be:6b:c5:fe:ba:cf:c3:94:c8:
+    61:b9:cc:6f:9e:0c:eb:d6:8a:cc:ff:e4:ce:a3:25:
+    1e:a5:78:fe:07:8d:fa:2a:17:fc:55:2f:35:f4:94:
+    52:32:60:a5:79:f6:39:4e:1d:e1:4b:d4:00:76:87:
+    92:c6:c4:c0:8e:f1:fc:09:b5:67:0a:c4:aa:3a:a6:
+    47:a6:47:6c:b4:37:3d:39:02:cc:30:9b:09:84:1f:
+    0f:7d:2f:6a:7b:b5:ed:3a:9a:7f:77:a6:02:6b:ab:
+    eb:22:75:12:71:78:30:01
+prime1:
+    00:fb:18:c8:bc:61:28:25:c1:36:41:32:fe:95:27:
+    28:3d:1a:d7:f3:83:78:4a:c0:93:00:0f:0f:d2:bc:
+    d8:20:36:59:b7:75:c9:f1:ca:75:0a:80:38:87:f4:
+    02:03:34:70:c0:0a:7a:a9:f4:9c:1b:ab:7b:3c:48:
+    9f:a0:8b:2c:25
+prime2:
+    00:e4:4c:0f:03:1c:7f:22:f5:d0:54:e9:0b:18:fd:
+    e6:88:dc:db:c1:6b:30:39:f6:d0:04:2e:fb:fc:25:
+    e0:be:cb:8c:6f:b0:e1:28:bf:29:de:e2:c0:b2:b2:
+    84:60:15:6b:ac:b1:7f:fe:d9:0e:39:bf:63:e0:a3:
+    1c:5a:c2:33:81
+exponent1:
+    27:f7:0e:e4:24:d6:9e:03:bd:9d:ec:fe:e6:40:80:
+    40:11:88:b3:a2:86:3f:e7:9c:be:12:a7:a3:14:19:
+    96:2e:f0:62:a9:e5:c5:8d:42:c9:b4:14:cb:56:c4:
+    07:3c:8e:81:92:69:69:a9:9c:3b:2f:35:03:28:4f:
+    f7:de:8e:dd
+exponent2:
+    09:bc:80:ab:66:4c:b9:c5:f8:03:97:08:c5:21:16:
+    f2:e1:50:71:f8:4b:4f:3d:8a:73:93:39:65:f0:8b:
+    9c:37:7c:1e:cb:51:5e:f6:80:27:a4:4e:09:90:f9:
+    7a:4b:8f:93:06:e2:e9:90:82:3d:ce:3e:c9:36:cb:
+    9f:c7:46:81
+coefficient:
+    3a:ea:34:22:e1:0d:f9:43:97:03:f3:a1:22:f8:91:
+    30:25:28:d9:ef:f1:41:1a:e2:70:b3:7c:93:49:c8:
+    9f:9d:70:66:0a:4c:8e:14:0e:96:ea:b0:79:8f:2b:
+    c8:d6:b6:19:ab:3f:7f:0c:27:9f:fc:c5:51:a8:89:
+    db:b5:53:f2
+
+
+  Question 3
+
+Clé pulbique: publicExponent
+Clé privée: privateExponent
+Nombre privée 1: prime1
+Nombre privée 2: prime2
+
+
+  Question 4
+
+cat ma-
+-----BEGIN RSA PRIVATE KEY-----
+Proc-Type: 4,ENCRYPTED
+DEK-Info: DES-EDE3-CBC,2F8D6D1ED01265BB
+
+m+PeWusjY+UcI6+irTLERRQjSIHY3yn9ehBSr4dI4TpiptHYFAsl+pT01uLBAMrE
++dPY/flxdV2nTYAPrMifVKb4pu4Qwnh3yfYol3ILkI5yD4UBrZTKJbm5BgTeqVAq
+LNvCeeFvo+R28ikESjxmNGN2H3PYmwsOL3J062GrudfgAeKe3Ei8oqgnfetrEQ/x
+zeu8/aMjjqvI7zXCB6W22Too+JpEW3iMAjLbBfUTIK8IMO2XN9knICRGfmGAm5LT
+zzZiYO92DThv6wqVuJTBdR7nuilZOSnrGana5oQQd5vn+C6Cx4T7FtwUCnHUrOGV
+V3FdK1bH2+QlXMy5+bl03b9VKbJogI/HhIVemtrzYpEqsqXDSLL2oO6ZG7sRvuUP
+JaaCLb4WI4plZAltfoXolmyKJC2p+sYMsze4UTuY9DFg8G2WrEgvEz9Av51Nvlf5
+PD+vkLvMfk5Rcn3CaevmIUzUavIAKcXEQcqMSr6sNlBnbapHYZMLWZIbr0Q2lCEo
+zjf2H1n8panCO1eBsScrBuzUbsrcfIdFKPxH+Ghw8YOdH7RQ+3vjudq1zyKqhJBw
+KxE0JXXAQPNTK/zSe4G+PrA/jJDAV3Tpkwv2b9ccn2aYoSWBeC980Yd3kV1tbAaL
+swiHZN/mBOvrK5uSCYeD1nxKEnHbN9ridYWKwXKTZZo7a4OO7lMbO/goWL8luGik
+UjpbiQ0hU7knaUYFPz6iHbw9eoS+QjFfMZKLVdfGJQsF/dsnKWtdD2YWIodfCZPy
+3HgXdITtr3Iga2xrKv3XhxrZmFMO8tCg9r7tsmIfPu4=
+-----END RSA PRIVATE KEY-----
+
+Le contenu a été modifié, la clé a bien été chiffrée.
+
+
+  Question 5
+
+-----BEGIN PUBLIC KEY-----
+MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDf7Kzc33Vm/F0qFELgbHMGxqMD
+ErzlevUU5c8sSwqBtTywFQANR5lB/yuwO28E59GCwwWKcJE04VVYqQtkmzdg337c
+s5o0L5cPqlOrJTtz9NezlqW5cXsYSQkmvfCl2oBKXMTOWx7iWXibhAOvyQphmm7o
+Cky7vU9e9V90FfadpQIDAQAB
+-----END PUBLIC KEY-----
+
+
+  Question 6
+
+Les messages (amusants) ont été déchiffrés de part et d'autre.
+
+
+
+Exercice 4
+
+  Question 1
+
+openssl rsautl -sign -in totosha1.txt -inkey maClef.pem -out totoSignature
+
+
+  Question 2
+
+openssl rsautl -verify -in totoSignature -pubin -inkey maClefPublique.pem -out totosha1.txt
+Aucun affichage, il n'y donc aucune différence.

@@ -1,0 +1,564 @@
+.:
+total 60
+drwxrwxr-x 6 saravanane saravanane 4096 juil. 13 11:32 anbox-modules-master
+drwxr-xr-x 2 saravanane saravanane 4096 nov.  26 08:41 Bureau
+drwxr-xr-x 6 saravanane saravanane 4096 déc.   6 11:33 CoursC
+drwxr-xr-x 2 saravanane saravanane 4096 nov.  25 13:28 Documents
+drwx------ 5 saravanane saravanane 4096 déc.   8 11:44 Dropbox
+-rw-r--r-- 1 saravanane saravanane    0 déc.   3 09:37 examples.desktop
+drwxr-xr-x 2 saravanane saravanane 4096 oct.   1 19:43 Images
+drwxr-xr-x 8 saravanane saravanane 4096 oct.   1 21:58 linux-surface
+drwxr-xr-x 2 saravanane saravanane 4096 oct.   1 19:43 Modèles
+drwxr-xr-x 2 saravanane saravanane 4096 oct.   1 19:43 Musique
+drwxrwxr-x 5 saravanane saravanane 4096 déc.   5 13:43 ProgWeb
+drwxr-xr-x 2 saravanane saravanane 4096 oct.   1 19:43 Public
+-rw-r--r-- 1 saravanane saravanane    0 déc.   8 11:47 sauvegarde.txt
+drwxr-xr-x 4 saravanane saravanane 4096 oct.  17 10:57 snap
+drwxr-xr-x 3 saravanane saravanane 4096 déc.   3 10:28 Téléchargements
+drwxr-xr-x 5 saravanane saravanane 4096 nov.  27 08:50 Unix
+drwxr-xr-x 2 saravanane saravanane 4096 oct.   1 19:43 Vidéos
+
+./anbox-modules-master:
+total 28
+-rw-rw-r-- 1 saravanane saravanane   83 juil. 13 11:32 99-anbox.rules
+-rw-rw-r-- 1 saravanane saravanane   26 juil. 13 11:32 anbox.conf
+drwxrwxr-x 3 saravanane saravanane 4096 juil. 13 11:32 ashmem
+drwxrwxr-x 2 saravanane saravanane 4096 juil. 13 11:32 binder
+drwxrwxr-x 3 saravanane saravanane 4096 juil. 13 11:32 debian
+-rw-rw-r-- 1 saravanane saravanane 1640 juil. 13 11:32 README.md
+drwxrwxr-x 2 saravanane saravanane 4096 juil. 13 11:32 scripts
+
+./anbox-modules-master/ashmem:
+total 44
+-rw-rw-r-- 1 saravanane saravanane 23561 juil. 13 11:32 ashmem.c
+-rw-rw-r-- 1 saravanane saravanane   663 juil. 13 11:32 ashmem.h
+-rw-rw-r-- 1 saravanane saravanane   303 juil. 13 11:32 deps.c
+-rw-rw-r-- 1 saravanane saravanane   216 juil. 13 11:32 dkms.conf
+-rw-rw-r-- 1 saravanane saravanane   418 juil. 13 11:32 Makefile
+drwxrwxr-x 2 saravanane saravanane  4096 juil. 13 11:32 uapi
+
+./anbox-modules-master/ashmem/uapi:
+total 4
+-rw-rw-r-- 1 saravanane saravanane 1486 juil. 13 11:32 ashmem.h
+
+./anbox-modules-master/binder:
+total 168
+-rw-rw-r-- 1 saravanane saravanane 125096 juil. 13 11:32 binder.c
+-rw-rw-r-- 1 saravanane saravanane  13033 juil. 13 11:32 binder.h
+-rw-rw-r-- 1 saravanane saravanane   8979 juil. 13 11:32 binder_trace.h
+-rw-rw-r-- 1 saravanane saravanane   5567 juil. 13 11:32 deps.c
+-rw-rw-r-- 1 saravanane saravanane    216 juil. 13 11:32 dkms.conf
+-rw-rw-r-- 1 saravanane saravanane    362 juil. 13 11:32 Makefile
+
+./anbox-modules-master/debian:
+total 40
+-rw-rw-r-- 1 saravanane saravanane 1977 juil. 13 11:32 changelog
+-rw-rw-r-- 1 saravanane saravanane    2 juil. 13 11:32 compat
+-rw-rw-r-- 1 saravanane saravanane  590 juil. 13 11:32 control
+-rw-rw-r-- 1 saravanane saravanane 1792 juil. 13 11:32 copyright
+-rw-rw-r-- 1 saravanane saravanane   36 juil. 13 11:32 dirs
+-rw-rw-r-- 1 saravanane saravanane  461 juil. 13 11:32 dkms
+-rw-rw-r-- 1 saravanane saravanane   78 juil. 13 11:32 install
+-rw-rw-r-- 1 saravanane saravanane  150 juil. 13 11:32 README.Debian
+-rwxr-xr-x 1 saravanane saravanane   61 juil. 13 11:32 rules
+drwxrwxr-x 2 saravanane saravanane 4096 juil. 13 11:32 source
+lrwxrwxrwx 1 saravanane saravanane   17 oct.  17 11:33 udev -> ../99-anbox.rules
+
+./anbox-modules-master/debian/source:
+total 8
+-rw-rw-r-- 1 saravanane saravanane 13 juil. 13 11:32 format
+-rw-rw-r-- 1 saravanane saravanane 41 juil. 13 11:32 options
+
+./anbox-modules-master/scripts:
+total 12
+-rwxr-xr-x 1 saravanane saravanane 589 juil. 13 11:32 build-against-kernel.sh
+-rwxr-xr-x 1 saravanane saravanane 110 juil. 13 11:32 build-with-docker.sh
+-rwxr-xr-x 1 saravanane saravanane 581 juil. 13 11:32 clean-build.sh
+
+./Bureau:
+total 0
+
+./CoursC:
+total 16
+drwxr-xr-x 2 saravanane saravanane 4096 déc.   6 11:33 fortune
+drwxr-xr-x 3 saravanane saravanane 4096 nov.  29 12:21 GuessWhich
+drwxr-xr-x 2 saravanane saravanane 4096 déc.   6 11:17 Tee
+drwxr-xr-x 2 saravanane saravanane 4096 déc.   5 17:33 WordCount
+
+./CoursC/fortune:
+total 0
+
+./CoursC/GuessWhich:
+total 24
+-rw-r--r-- 1 saravanane saravanane   137 nov.  29 12:21 cr.txt
+-rwxr-xr-x 1 saravanane saravanane 12904 nov.  29 12:17 GuessWhich
+-rw-r--r-- 1 saravanane saravanane  1625 nov.  29 12:17 main.c
+
+./CoursC/Tee:
+total 32
+-rw-r--r-- 1 saravanane saravanane  1997 déc.   6 11:17 main.c
+-rwxr-xr-x 1 saravanane saravanane 13064 déc.   6 11:17 tee
+-rw-r--r-- 1 saravanane saravanane     9 déc.   6 11:18 test
+-rw-r--r-- 1 saravanane saravanane     9 déc.   6 11:18 test1
+-rw-r--r-- 1 saravanane saravanane     9 déc.   6 11:18 test2
+
+./CoursC/WordCount:
+total 28
+-rw-r--r-- 1 saravanane saravanane  2600 déc.   5 17:33 main.c
+-rw-r--r-- 1 saravanane saravanane    10 déc.   3 09:22 test
+-rw-r--r-- 1 saravanane saravanane     2 déc.   3 10:05 test1
+-rwxr-xr-x 1 saravanane saravanane 12944 déc.   5 17:33 WordCount
+
+./Documents:
+total 240
+-rw-rw-r-- 1 saravanane saravanane 244164 nov.  25 13:28 pj_web_probleme.png
+
+./Dropbox:
+total 4328
+-rw-r--r-- 1 saravanane saravanane 3153618 nov.  27 16:12 20191127_161141.jpg
+drwxr-xr-x 7 saravanane saravanane    4096 oct.  11 16:37 Alternance
+-rw-r--r-- 1 saravanane saravanane   98141 oct.  12 16:15 Avis_d_impot_2019_sur_les_revenus_2018.pdf
+drwxr-xr-x 2 saravanane saravanane    4096 oct.   2 12:17 Dossier_Candidature
+-rw-r--r-- 1 saravanane saravanane    4494 déc.   4 19:03 keepass.kdbx
+-rw-r--r-- 1 saravanane saravanane     240 févr.  1  2019 Prise en main de Dropbox Paper.url
+-rw-r--r-- 1 saravanane saravanane 1155228 févr.  1  2019 Prise en main de Dropbox.pdf
+
+./Dropbox/Alternance:
+total 1408
+drwxrwxr-x 2 saravanane saravanane   4096 oct.  11 16:37 Acensi
+-rw-r--r-- 1 saravanane saravanane 165822 août  23 16:35 AEA03877.tmp
+-rw-r--r-- 1 saravanane saravanane 131663 août  12 12:08 C0B7C576.tmp
+-rw-r--r-- 1 saravanane saravanane 172264 sept. 23 18:54 CV1_MANICOME_Saravanane_IINFO.pdf
+-rw-r--r-- 1 saravanane saravanane 172138 oct.   9 16:13 CV1_MANICOME_Saravanane.pdf
+-rw-r--r-- 1 saravanane saravanane 271525 sept. 23 18:40 CV_MANICOME_Saravanane.docx
+-rw-r--r-- 1 saravanane saravanane 172264 sept. 23 18:54 CV_MANICOME_Saravanane.pdf
+drwxr-xr-x 2 saravanane saravanane   4096 oct.   2 12:17 Infotel
+-rw-r--r-- 1 saravanane saravanane  30420 sept. 25 12:00 Lettre de motivation.docx
+-rw-r--r-- 1 saravanane saravanane 183738 sept.  6 11:40 LM_MANICOME_Saravanane1.pdf
+-rw-r--r-- 1 saravanane saravanane  24132 oct.  11 16:37 LM_MANICOME_Saravanane.odt
+-rw-r--r-- 1 saravanane saravanane  72442 oct.   9 13:02 LM_MANICOME_Saravanane.pdf
+drwxr-xr-x 2 saravanane saravanane   4096 oct.   2 12:17 Orange
+drwxr-xr-x 2 saravanane saravanane   4096 oct.   2 12:17 the walking nerds
+drwxr-xr-x 2 saravanane saravanane   4096 oct.   2 12:17 TimSoft
+
+./Dropbox/Alternance/Acensi:
+total 72
+-rw-rw-r-- 1 saravanane saravanane 71216 oct.  11 16:37 LM_MANICOME_Saravanane.pdf
+
+./Dropbox/Alternance/Infotel:
+total 32
+-rw-r--r-- 1 saravanane saravanane 29575 août  19 13:29 Lettre de motivation.docx
+
+./Dropbox/Alternance/Orange:
+total 224
+-rw-r--r-- 1 saravanane saravanane  29988 sept.  9 16:31 Lettre de motivation.docx
+-rw-r--r-- 1 saravanane saravanane 194365 sept.  9 16:31 LM_MANICOME_Saravanane.pdf
+
+./Dropbox/Alternance/the walking nerds:
+total 196
+-rw-r--r-- 1 saravanane saravanane  29723 sept.  9 12:59 Lettre de motivation.docx
+-rw-r--r-- 1 saravanane saravanane 166661 sept.  9 13:00 LM_MANICOME_Saravanane.pdf
+
+./Dropbox/Alternance/TimSoft:
+total 156
+-rw-r--r-- 1 saravanane saravanane  29575 août  19 13:29 Lettre de motivation.docx
+-rw-r--r-- 1 saravanane saravanane 124801 août  19 13:30 LM_MANICOME_Saravanane.pdf
+
+./Dropbox/Dossier_Candidature:
+total 12720
+-rw-r--r-- 1 saravanane saravanane 1475998 mars  29  2019 APE2018-2019.pdf
+-rw-r--r-- 1 saravanane saravanane  118054 mars  14  2019 B456D6AF.tmp
+-rw-r--r-- 1 saravanane saravanane  143109 mars  31  2019 B909A0E4.tmp
+-rw-r--r-- 1 saravanane saravanane  608975 mars  19  2019 Bulletin_Semestre1.docx
+-rw-r--r-- 1 saravanane saravanane  311500 mars  19  2019 Bulletin_Semestre1.pdf
+-rw-r--r-- 1 saravanane saravanane  592105 mars  19  2019 Bulletin_Semestre2.docx
+-rw-r--r-- 1 saravanane saravanane  319164 mars  19  2019 Bulletin_Semestre2.pdf
+-rw-r--r-- 1 saravanane saravanane  635434 mars  19  2019 Bulletin_Semestre3.docx
+-rw-r--r-- 1 saravanane saravanane 1812613 avril  1  2019 Bulletin_Semestre.docx
+-rw-r--r-- 1 saravanane saravanane  193988 mars  30  2019 CNI.pdf
+-rw-r--r-- 1 saravanane saravanane   82880 avril 24  2019 CV1_MANICOME_Saravanane_IINFO.docx
+-rw-r--r-- 1 saravanane saravanane  114572 mars  31  2019 CV_MANICOME_Saravanane.pdf
+-rw-r--r-- 1 saravanane saravanane   15809 mars  31  2019 LM1_MANICOME_Saravanane_IINFO.docx
+-rw-r--r-- 1 saravanane saravanane  144358 mars  31  2019 LM1_MANICOME_Saravanane_IINFO.pdf
+-rw-r--r-- 1 saravanane saravanane 1374712 mars  30  2019 MonCursus.pdf
+-rw-r--r-- 1 saravanane saravanane 1078426 mars  29  2019 Notes2017-2018(1).pdf
+-rw-r--r-- 1 saravanane saravanane 1163331 mars  29  2019 Notes2017-2018(2).pdf
+-rw-r--r-- 1 saravanane saravanane 1143501 mars  29  2019 Notes2018-2019(3).pdf
+-rw-r--r-- 1 saravanane saravanane  320200 mars  19  2019 Relevé_de_notes_Semestre3.pdf
+-rw-r--r-- 1 saravanane saravanane  691484 avril  1  2019 Relevés_de_notes_DUT_MANICOME.pdf
+-rw-r--r-- 1 saravanane saravanane  184376 mars  29  2019 RGPD.pdf
+-rw-r--r-- 1 saravanane saravanane  452789 mars  29  2019 RNB.pdf
+
+./Images:
+total 0
+
+./linux-surface:
+total 48
+drwxr-xr-x 4 saravanane saravanane 4096 oct.   1 21:56 configs
+drwxr-xr-x 2 saravanane saravanane 4096 oct.   1 21:56 firmware
+drwxr-xr-x 3 saravanane saravanane 4096 oct.   1 21:56 packages
+drwxr-xr-x 4 saravanane saravanane 4096 oct.   1 21:56 patches
+-rw-r--r-- 1 saravanane saravanane 4910 oct.   1 21:56 README.md
+drwxr-xr-x 4 saravanane saravanane 4096 oct.   1 21:56 root
+-rw-r--r-- 1 saravanane saravanane 8947 oct.   1 21:56 setup.sh
+-rw-r--r-- 1 saravanane saravanane 4294 oct.   1 21:56 SIGNING.md
+
+./linux-surface/configs:
+total 8
+drwxr-xr-x 2 saravanane saravanane 4096 oct.   1 21:56 4.19
+drwxr-xr-x 2 saravanane saravanane 4096 oct.   1 21:56 5.1
+
+./linux-surface/configs/4.19:
+total 216
+-rw-r--r-- 1 saravanane saravanane 218462 oct.   1 21:56 config
+
+./linux-surface/configs/5.1:
+total 220
+-rw-r--r-- 1 saravanane saravanane 222167 oct.   1 21:56 config
+
+./linux-surface/firmware:
+total 11540
+-rw-r--r-- 1 saravanane saravanane 1349839 oct.   1 21:56 ath10k_firmware.zip
+-rw-r--r-- 1 saravanane saravanane  210559 oct.   1 21:56 i915_firmware_bxt.zip
+-rw-r--r-- 1 saravanane saravanane  150675 oct.   1 21:56 i915_firmware_cfl.zip
+-rw-r--r-- 1 saravanane saravanane    8378 oct.   1 21:56 i915_firmware_cnl.zip
+-rw-r--r-- 1 saravanane saravanane    3336 oct.   1 21:56 i915_firmware_glk.zip
+-rw-r--r-- 1 saravanane saravanane  225526 oct.   1 21:56 i915_firmware_kbl.zip
+-rw-r--r-- 1 saravanane saravanane  311023 oct.   1 21:56 i915_firmware_skl.zip
+-rw-r--r-- 1 saravanane saravanane  354128 oct.   1 21:56 ipts_firmware_v101.zip
+-rw-r--r-- 1 saravanane saravanane  355566 oct.   1 21:56 ipts_firmware_v102.zip
+-rw-r--r-- 1 saravanane saravanane  347386 oct.   1 21:56 ipts_firmware_v103.zip
+-rw-r--r-- 1 saravanane saravanane  354098 oct.   1 21:56 ipts_firmware_v137.zip
+-rw-r--r-- 1 saravanane saravanane  347608 oct.   1 21:56 ipts_firmware_v76.zip
+-rw-r--r-- 1 saravanane saravanane  347504 oct.   1 21:56 ipts_firmware_v78.zip
+-rw-r--r-- 1 saravanane saravanane  424417 oct.   1 21:56 ipts_firmware_v79.zip
+-rw-r--r-- 1 saravanane saravanane 6116515 oct.   1 21:56 mrvl_firmware.zip
+-rw-r--r-- 1 saravanane saravanane  759874 oct.   1 21:56 mwlwifi_firmware.zip
+-rw-r--r-- 1 saravanane saravanane   56791 oct.   1 21:56 nvidia_firmware_gp108.zip
+-rw-r--r-- 1 saravanane saravanane   63884 oct.   1 21:56 nvidia_firmware_gv100.zip
+
+./linux-surface/packages:
+total 4
+drwxr-xr-x 2 saravanane saravanane 4096 oct.   1 21:56 libwacom
+
+./linux-surface/packages/libwacom:
+total 132
+-rw-r--r-- 1 saravanane saravanane 135024 oct.   1 21:56 libwacom_0.32-surface-1_amd64.deb
+
+./linux-surface/patches:
+total 8
+drwxr-xr-x 2 saravanane saravanane 4096 oct.   1 21:56 4.19
+drwxr-xr-x 2 saravanane saravanane 4096 oct.   1 21:56 5.1
+
+./linux-surface/patches/4.19:
+total 992
+-rw-r--r-- 1 saravanane saravanane 111432 oct.   1 21:56 0001-surface-acpi.patch
+-rw-r--r-- 1 saravanane saravanane   4655 oct.   1 21:56 0002-suspend.patch
+-rw-r--r-- 1 saravanane saravanane   7650 oct.   1 21:56 0003-buttons.patch
+-rw-r--r-- 1 saravanane saravanane  73319 oct.   1 21:56 0004-cameras.patch
+-rw-r--r-- 1 saravanane saravanane 197388 oct.   1 21:56 0005-ipts.patch
+-rw-r--r-- 1 saravanane saravanane   7118 oct.   1 21:56 0006-hid.patch
+-rw-r--r-- 1 saravanane saravanane    757 oct.   1 21:56 0007-sdcard-reader.patch
+-rw-r--r-- 1 saravanane saravanane  10511 oct.   1 21:56 0008-wifi.patch
+-rw-r--r-- 1 saravanane saravanane  16992 oct.   1 21:56 0009-surface3-power.patch
+-rw-r--r-- 1 saravanane saravanane 558537 oct.   1 21:56 0010-mwlwifi.patch
+-rw-r--r-- 1 saravanane saravanane    878 oct.   1 21:56 0011-surface-lte.patch
+
+./linux-surface/patches/5.1:
+total 992
+-rw-r--r-- 1 saravanane saravanane 110731 oct.   1 21:56 0001-surface-acpi.patch
+-rw-r--r-- 1 saravanane saravanane   4669 oct.   1 21:56 0002-suspend.patch
+-rw-r--r-- 1 saravanane saravanane   7650 oct.   1 21:56 0003-buttons.patch
+-rw-r--r-- 1 saravanane saravanane  73319 oct.   1 21:56 0004-cameras.patch
+-rw-r--r-- 1 saravanane saravanane 197444 oct.   1 21:56 0005-ipts.patch
+-rw-r--r-- 1 saravanane saravanane   7137 oct.   1 21:56 0006-hid.patch
+-rw-r--r-- 1 saravanane saravanane    757 oct.   1 21:56 0007-sdcard-reader.patch
+-rw-r--r-- 1 saravanane saravanane  10511 oct.   1 21:56 0008-wifi.patch
+-rw-r--r-- 1 saravanane saravanane  16992 oct.   1 21:56 0009-surface3-power.patch
+-rw-r--r-- 1 saravanane saravanane 558537 oct.   1 21:56 0010-mwlwifi.patch
+-rw-r--r-- 1 saravanane saravanane    878 oct.   1 21:56 0011-surface-lte.patch
+
+./linux-surface/root:
+total 8
+drwxr-xr-x 9 saravanane saravanane 4096 oct.   1 21:56 etc
+drwxr-xr-x 3 saravanane saravanane 4096 oct.   1 21:56 lib
+
+./linux-surface/root/etc:
+total 28
+drwxr-xr-x 2 saravanane saravanane 4096 oct.   1 21:56 initramfs-tools
+drwxr-xr-x 2 saravanane saravanane 4096 oct.   1 21:56 modprobe.d
+drwxr-xr-x 3 saravanane saravanane 4096 oct.   1 21:56 NetworkManager
+drwxr-xr-x 2 saravanane saravanane 4096 oct.   1 21:56 pulse
+drwxr-xr-x 2 saravanane saravanane 4096 oct.   1 21:56 systemd
+drwxr-xr-x 3 saravanane saravanane 4096 oct.   1 21:56 udev
+drwxr-xr-x 3 saravanane saravanane 4096 oct.   1 21:56 X11
+
+./linux-surface/root/etc/initramfs-tools:
+total 4
+-rw-r--r-- 1 saravanane saravanane 331 oct.   1 21:56 modules
+
+./linux-surface/root/etc/modprobe.d:
+total 12
+-rw-r--r-- 1 saravanane saravanane  32 oct.   1 21:56 ath10k.conf
+-rw-r--r-- 1 saravanane saravanane 104 oct.   1 21:56 snd-hda-intel.conf
+-rw-r--r-- 1 saravanane saravanane  52 oct.   1 21:56 soc-button-array.conf
+
+./linux-surface/root/etc/NetworkManager:
+total 8
+drwxr-xr-x 2 saravanane saravanane 4096 oct.   1 21:56 conf.d
+-rw-r--r-- 1 saravanane saravanane  153 oct.   1 21:56 NetworkManager.conf
+
+./linux-surface/root/etc/NetworkManager/conf.d:
+total 4
+-rw-r--r-- 1 saravanane saravanane 32 oct.   1 21:56 default-wifi-powersave-on.conf
+
+./linux-surface/root/etc/pulse:
+total 12
+-rw-r--r-- 1 saravanane saravanane 2278 oct.   1 21:56 daemon_example.conf
+-rw-r--r-- 1 saravanane saravanane 5100 oct.   1 21:56 default_example.pa
+
+./linux-surface/root/etc/systemd:
+total 8
+-rw-r--r-- 1 saravanane saravanane 1010 oct.   1 21:56 logind.conf
+-rw-r--r-- 1 saravanane saravanane   28 oct.   1 21:56 sleep.conf
+
+./linux-surface/root/etc/udev:
+total 4
+drwxr-xr-x 2 saravanane saravanane 4096 oct.   1 21:56 rules.d
+
+./linux-surface/root/etc/udev/rules.d:
+total 8
+-rw-r--r-- 1 saravanane saravanane  441 oct.   1 21:56 98-keyboardscovers.rules
+-rw-r--r-- 1 saravanane saravanane 1971 oct.   1 21:56 99-touchscreens.rules
+
+./linux-surface/root/etc/X11:
+total 4
+drwxr-xr-x 2 saravanane saravanane 4096 oct.   1 21:56 xorg.conf.d
+
+./linux-surface/root/etc/X11/xorg.conf.d:
+total 4
+-rw-r--r-- 1 saravanane saravanane 201 oct.   1 21:56 20-intel_example.conf
+
+./linux-surface/root/lib:
+total 4
+drwxr-xr-x 3 saravanane saravanane 4096 oct.   1 21:56 systemd
+
+./linux-surface/root/lib/systemd:
+total 4
+drwxr-xr-x 2 saravanane saravanane 4096 oct.   1 21:56 system-sleep
+
+./linux-surface/root/lib/systemd/system-sleep:
+total 4
+-rw-r--r-- 1 saravanane saravanane 782 oct.   1 21:56 sleep
+
+./Modèles:
+total 0
+
+./Musique:
+total 0
+
+./ProgWeb:
+total 1412
+drwxr-xr-x 2 saravanane saravanane    4096 nov.  26 16:10 Internet, World Wide Web, HTTP, HTML, CSS_fichiers
+-rw-r--r-- 1 saravanane saravanane   14899 nov.  26 16:10 Internet, World Wide Web, HTTP, HTML, CSS.htm
+-rw-r--r-- 1 saravanane saravanane 1413227 déc.   5 13:43 manicome_tp2.zip
+drwxrwxr-x 2 saravanane saravanane    4096 nov.  29 16:56 TP1
+drwxr-xr-x 4 saravanane saravanane    4096 déc.   5 10:34 TP2
+
+./ProgWeb/Internet, World Wide Web, HTTP, HTML, CSS_fichiers:
+total 28
+-rw-r--r-- 1 saravanane saravanane 1096 nov.  26 16:10 lock_icon.gif
+-rw-r--r-- 1 saravanane saravanane 8342 nov.  26 16:10 mlv.png
+-rw-r--r-- 1 saravanane saravanane  856 nov.  26 16:10 printstylesheet.css
+-rw-r--r-- 1 saravanane saravanane 3655 nov.  26 16:10 sh_ide-eclipse.css
+-rw-r--r-- 1 saravanane saravanane 1225 nov.  26 16:10 stylesheet.css
+
+./ProgWeb/TP1:
+total 3108
+-rw-rw-r-- 1 saravanane saravanane     779 nov.  30 11:25 conclusion.html
+-rw-r--r-- 1 saravanane saravanane    3414 nov.  30 11:24 exercice2.html
+-rw-r--r-- 1 saravanane saravanane    2468 nov.  29 16:54 exercice3.html
+-rw-r--r-- 1 saravanane saravanane    3030 nov.  29 16:55 exercice4.html
+-rw-rw-r-- 1 saravanane saravanane    3435 nov.  29 16:55 exercice5.html
+-rw-r--r-- 1 saravanane saravanane 3153618 nov.  29 16:53 mon_super_arbre.jpg
+-rw-r--r-- 1 saravanane saravanane     836 nov.  29 16:56 tp1.css
+-rw-rw-r-- 1 saravanane saravanane    2735 nov.  30 09:48 tp1.html
+
+./ProgWeb/TP2:
+total 36
+-rw-r--r-- 1 saravanane saravanane  1212 déc.   5 13:38 compte-rendu-tp2.css
+-rw-r--r-- 1 saravanane saravanane 21417 déc.   5 13:40 compte-rendu-tp2.html
+drwxr-xr-x 2 saravanane saravanane  4096 déc.   5 10:34 exercice3
+drwxr-xr-x 2 saravanane saravanane  4096 déc.   5 08:57 exercice4
+
+./ProgWeb/TP2/exercice3:
+total 1404
+-rw-r--r-- 1 saravanane saravanane 222703 déc.   5 10:34 animal1.jpg
+-rw-r--r-- 1 saravanane saravanane 240733 déc.   5 10:34 animal2.jpg
+-rw-r--r-- 1 saravanane saravanane 712673 déc.   5 10:34 animal3.jpg
+-rw-r--r-- 1 saravanane saravanane 127356 déc.   5 10:34 animal4.jpg
+-rw-r--r-- 1 saravanane saravanane  76313 déc.   5 10:34 animal5.jpg
+-rw-r--r-- 1 saravanane saravanane  43088 déc.   5 10:34 animal6.jpg
+-rw-r--r-- 1 saravanane saravanane   1149 déc.   5 10:34 exo1.html
+
+./ProgWeb/TP2/exercice4:
+total 4
+-rw-r--r-- 1 saravanane saravanane 897 déc.   5 10:42 exo2.html
+
+./Public:
+total 0
+
+./snap:
+total 8
+drwxr-xr-x 5 saravanane saravanane 4096 oct.  17 11:52 anbox
+drwxr-xr-x 4 saravanane saravanane 4096 oct.  17 10:49 anbox-installer
+
+./snap/anbox:
+total 12
+drwxr-xr-x 4 saravanane saravanane 4096 oct.  17 11:44 158
+drwxr-xr-x 4 saravanane saravanane 4096 oct.  17 11:52 181
+drwxr-xr-x 5 saravanane saravanane 4096 oct.  17 11:49 common
+lrwxrwxrwx 1 saravanane saravanane    3 oct.  17 11:52 current -> 181
+
+./snap/anbox/158:
+total 0
+
+./snap/anbox/181:
+total 0
+
+./snap/anbox/common:
+total 8
+drwx------ 3 saravanane saravanane 4096 oct.  17 11:49 app-data
+drwx------ 3 saravanane saravanane 4096 oct.  17 11:44 runtime
+
+./snap/anbox/common/app-data:
+total 4
+drwx------ 3 saravanane saravanane 4096 oct.  17 11:49 applications
+
+./snap/anbox/common/app-data/applications:
+total 4
+drwx------ 2 saravanane saravanane 4096 oct.  17 15:37 anbox
+
+./snap/anbox/common/app-data/applications/anbox:
+total 96
+-rw------- 1 saravanane saravanane  312 oct.  17 15:43 anbox-com-android-calculator2.desktop
+-rw------- 1 saravanane saravanane 1933 oct.  17 15:43 anbox-com-android-calculator2.png
+-rw------- 1 saravanane saravanane  307 oct.  17 15:43 anbox-com-android-calendar.desktop
+-rw------- 1 saravanane saravanane 3477 oct.  17 15:43 anbox-com-android-calendar.png
+-rw------- 1 saravanane saravanane  316 oct.  17 15:43 anbox-com-android-contacts.desktop
+-rw------- 1 saravanane saravanane 2689 oct.  17 15:43 anbox-com-android-contacts.png
+-rw------- 1 saravanane saravanane  300 oct.  17 15:43 anbox-com-android-deskclock.desktop
+-rw------- 1 saravanane saravanane 3472 oct.  17 15:43 anbox-com-android-deskclock.png
+-rw------- 1 saravanane saravanane  313 oct.  17 15:43 anbox-com-android-documentsui.desktop
+-rw------- 1 saravanane saravanane 2113 oct.  17 15:43 anbox-com-android-documentsui.png
+-rw------- 1 saravanane saravanane  295 oct.  17 15:43 anbox-com-android-email.desktop
+-rw------- 1 saravanane saravanane 2061 oct.  17 15:43 anbox-com-android-email.png
+-rw------- 1 saravanane saravanane  312 oct.  17 15:43 anbox-com-android-gallery3d.desktop
+-rw------- 1 saravanane saravanane 3320 oct.  17 15:43 anbox-com-android-gallery3d.png
+-rw------- 1 saravanane saravanane  299 oct.  17 15:43 anbox-com-android-music.desktop
+-rw------- 1 saravanane saravanane 4356 oct.  17 15:43 anbox-com-android-music.png
+-rw------- 1 saravanane saravanane  299 oct.  17 15:43 anbox-com-android-settings.desktop
+-rw------- 1 saravanane saravanane 3438 oct.  17 15:43 anbox-com-android-settings.png
+-rw------- 1 saravanane saravanane  385 oct.  17 15:43 anbox-com-notabasement-mangarock-android-lotus.desktop
+-rw------- 1 saravanane saravanane 2319 oct.  17 15:43 anbox-com-notabasement-mangarock-android-lotus.png
+-rw------- 1 saravanane saravanane  336 oct.  17 15:43 anbox-org-chromium-webview_shell.desktop
+-rw------- 1 saravanane saravanane 7499 oct.  17 15:43 anbox-org-chromium-webview_shell.png
+
+./snap/anbox/common/runtime:
+total 4
+drwx------ 4 saravanane saravanane 4096 oct.  17 11:44 anbox
+
+./snap/anbox/common/runtime/anbox:
+total 8
+drwx------ 2 saravanane saravanane 4096 oct.  17 15:37 input
+drwx------ 2 saravanane saravanane 4096 oct.  17 15:37 sockets
+
+./snap/anbox/common/runtime/anbox/input:
+total 0
+srwx------ 1 saravanane saravanane 0 oct.  17 15:37 event0
+srwx------ 1 saravanane saravanane 0 oct.  17 15:37 event1
+srwx------ 1 saravanane saravanane 0 oct.  17 15:37 event2
+
+./snap/anbox/common/runtime/anbox/sockets:
+total 0
+srwxrwxrwx 1 saravanane saravanane 0 oct.  17 15:37 anbox_audio
+srwx------ 1 saravanane saravanane 0 oct.  17 15:37 anbox_bridge
+srw-rw-rw- 1 saravanane saravanane 0 oct.  17 15:37 qemu_pipe
+
+./snap/anbox-installer:
+total 8
+drwxr-xr-x 2 saravanane saravanane 4096 oct.  17 10:49 24
+drwxr-xr-x 2 saravanane saravanane 4096 oct.  17 10:49 common
+lrwxrwxrwx 1 saravanane saravanane    2 oct.  17 10:49 current -> 24
+
+./snap/anbox-installer/24:
+total 0
+
+./snap/anbox-installer/common:
+total 0
+
+./Téléchargements:
+total 13060
+drwxr-xr-x 2 saravanane saravanane    4096 nov.  29 16:31 Ferrand_TP1
+-rw-rw-r-- 1 saravanane saravanane 6492070 nov.  29 16:17 mon-super-arbre.JPG
+-rw-rw-r-- 1 saravanane saravanane  210300 oct.   2 08:44 tp1 Prise en main de l’environnement Unix.pdf
+-rw-rw-r-- 1 saravanane saravanane 6660300 nov.  27 08:49 tpcours.zip
+
+./Téléchargements/Ferrand_TP1:
+total 13272
+-rw-r--r-- 1 saravanane saravanane   16852 nov.  28 19:13 Exo2Q2.png
+-rw-r--r-- 1 saravanane saravanane   27853 nov.  28 19:30 Exo2Q4.png
+-rw-r--r-- 1 saravanane saravanane   23984 nov.  28 19:36 Exo2Q6b1.png
+-rw-r--r-- 1 saravanane saravanane   29469 nov.  28 19:37 Exo2Q6b2.png
+-rw-r--r-- 1 saravanane saravanane    9377 nov.  28 19:33 Exo2Q6b.png
+-rw-r--r-- 1 saravanane saravanane   10781 nov.  28 19:27 Exo2Q6.png
+-rw-r--r-- 1 saravanane saravanane    4112 nov.  28 19:41 Exo3Q1.png
+-rw-r--r-- 1 saravanane saravanane   23011 nov.  28 19:44 Exo3Q2.png
+-rw-r--r-- 1 saravanane saravanane   12655 nov.  28 19:47 Exo3Q3.png
+-rw-r--r-- 1 saravanane saravanane   25014 nov.  28 19:50 Exo3Q4.png
+-rw-r--r-- 1 saravanane saravanane   12514 nov.  28 19:52 Exo3Q5.png
+-rw-r--r-- 1 saravanane saravanane   30895 nov.  28 19:58 Exo4Q1.png
+-rw-r--r-- 1 saravanane saravanane   27719 nov.  28 20:04 Exo4Q6.png
+-rw-r--r-- 1 saravanane saravanane   36486 nov.  28 20:08 Exo4Q7.png
+-rw-r--r-- 1 saravanane saravanane 6750807 nov.  29 16:31 Ferrand_TP1.zip
+-rw-rw-r-- 1 saravanane saravanane 6492070 nov.  29 16:17 mon-super-arbre.JPG
+-rw-rw-r-- 1 saravanane saravanane     259 nov.  29 16:24 tp1.css
+-rw-rw-r-- 1 saravanane saravanane   12746 nov.  29 16:29 tp1.html
+
+./Unix:
+total 2236
+-rw------- 1 saravanane saravanane 2276941 nov.  26 07:38 Cours 2.pdf
+drwxr-xr-x 2 saravanane saravanane    4096 nov.  27 09:00 TP1
+drwxr-xr-x 2 saravanane saravanane    4096 déc.   8 11:43 TP2
+drwxr-xr-x 3 saravanane saravanane    4096 déc.   4 09:45 TP3
+
+./Unix/TP1:
+total 3512
+-rw-r--r-- 1 saravanane saravanane 3031376 nov.  27 08:49 Cours 1.pdf
+-rw-r--r-- 1 saravanane saravanane  347948 nov.  27 08:49 tp1.pdf
+-rw-r--r-- 1 saravanane saravanane  210300 nov.  27 08:49 tp1 Prise en main de l’environnement Unix.pdf
+
+./Unix/TP2:
+total 42572
+-rw-r--r-- 1 saravanane saravanane   102475 nov.  27 08:49 Cours 2 Commandes de filtres.pdf
+-rw-r--r-- 1 saravanane saravanane  2276941 nov.  27 08:49 Cours 2.pdf
+-rw-r--r-- 1 saravanane saravanane   103804 nov.  27 08:49 Cours 2 suite Editeur de flot sed.pdf
+-rw-r--r-- 1 saravanane saravanane   195066 nov.  27 08:49 Introduction aux scripts BASH.pdf
+-rw-r--r-- 1 saravanane saravanane   145421 déc.   8 11:43 lst_passwds.err
+-rw-r--r-- 1 saravanane saravanane 40498206 déc.   8 11:43 lst_passwds.log
+-rw-r--r-- 1 saravanane saravanane   253999 nov.  27 08:49 tp2.pdf
+
+./Unix/TP3:
+total 264
+drwxr-xr-x 2 saravanane saravanane   4096 déc.   4 09:45 exemple
+-rw------- 1 saravanane saravanane 266188 nov.  26 07:38 tp3.pdf
+
+./Unix/TP3/exemple:
+total 100
+-rwxrw-rw- 1 saravanane saravanane   252 nov.  27 10:11 exo1.sh
+-rwxr-xr-x 1 saravanane saravanane   232 nov.  27 10:27 exo2.sh
+-rwxr-xr-x 1 saravanane saravanane   329 déc.   4 09:44 exo3.sh
+-rw------- 1 saravanane saravanane 88842 nov.  26 07:39 TP programmationShellBash.pdf
+
+./Vidéos:
+total 0
