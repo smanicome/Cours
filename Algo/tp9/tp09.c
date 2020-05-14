@@ -15,14 +15,13 @@ int main(int argc, char const *argv[]) {
     n = (int)strtol(argv[1], NULL, 10);
     /* menu(t); */
 
-    /* 
-		t = insert_n_random(t, n);
-
+    t = insert_n_random(t, n);
+    /*
 		time ./tp09 36000
 
 		real    0m9,727s
 		user    0m9,647s
-		sys     0m0,008s 
+		sys     0m0,008s
 	*/
 
     /* 

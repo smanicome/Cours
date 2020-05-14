@@ -13,18 +13,10 @@ node *find_bst(node *t, int elt) {
 
     if (t->data == elt) {
         return t;
+    } else if (t->data < elt) {
+        return find_bst(t->right, elt);
     } else {
-
-        node *left = find_bst(t->left, elt);
-        node *right = find_bst(t->right, elt);
-        
-        if (left != NULL) {
-            return left;
-        } else if (right != NULL) {
-            return right;
-        } else {
-            return NULL;
-        }
+        return find_bst(t->left, elt);
     }
 }
 
@@ -32,15 +24,6 @@ node *find_bst(node *t, int elt) {
  * Permet de conserver le code récursive sans vérifier la présence de l'élément à chaque
  * récursion
  */
-node *insert_bst_wrapper(node *t, int elt) {
-    if (find_bst(t, elt) != NULL) {
-        return t;
-    } else {
-        t = insert_bst(t, elt);
-    }
-
-    return t;
-}
 
 node *insert_bst(node *t, int elt) {
     if (t == NULL) {
@@ -48,13 +31,12 @@ node *insert_bst(node *t, int elt) {
         return t;
     }
 
-    int height_left = height(t->left) - 1;
-    int height_right = height(t->right) - 1;
-
-    if (height_left < height_right) {
-        t->left = insert_bst(t->left, elt);
+    if (t->data == elt) {
+        return t;
+    } else if (t->data < elt) {
+        insert_bst(t->right, elt);
     } else {
-        t->right = insert_bst(t->right, elt);
+        insert_bst(t->left, elt);
     }
 
     return t;
@@ -65,10 +47,14 @@ node *insert_n_random(node *t, int n) {
     srand(time(NULL));
     
     for (i = 0; i < n; i++) {
-        t = insert_bst_wrapper(t, rand() % (2 * n));
+        t = insert_bst(t, rand() % (2 * n));
     }
 
     return t;
+}
+
+node *extract_min_bst(node *t, node **min) {
+
 }
 
 void menu(node *t) {
