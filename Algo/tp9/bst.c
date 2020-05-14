@@ -34,9 +34,9 @@ node *insert_bst(node *t, int elt) {
     if (t->data == elt) {
         return t;
     } else if (t->data < elt) {
-        insert_bst(t->right, elt);
+        t->right = insert_bst(t->right, elt);
     } else {
-        insert_bst(t->left, elt);
+        t->left = insert_bst(t->left, elt);
     }
 
     return t;
@@ -47,14 +47,65 @@ node *insert_n_random(node *t, int n) {
     srand(time(NULL));
     
     for (i = 0; i < n; i++) {
-        t = insert_bst(t, rand() % (2 * n));
+        t = insert_bst(t, rand() % n);
+    }
+
+    return t;
+}
+
+node *remove_random(node *t, int n) {
+    int i;
+    srand(time(NULL));
+
+    for (i = 0; i < n; i++) {
+        t = remove_bst(t, rand() % 999);
     }
 
     return t;
 }
 
 node *extract_min_bst(node *t, node **min) {
+    if (t == NULL) {
+        return NULL;
+    }
 
+    if (t->left == NULL) {
+        *min = t;
+        return NULL;
+    } else {
+        t->left = extract_min_bst(t->left, min);
+    }
+    
+    return t;
+}
+
+node *remove_bst(node *t, int elt) {
+    if (t == NULL) {
+        return NULL;
+    }
+
+    if (t->data == elt) {
+        node **n = (node **)malloc(sizeof(node *));
+        node *right = t->right;
+
+        extract_min_bst(t->left, n);
+
+        while ((*n) != NULL) {
+            insert_bst(t->right, (*n)->data);
+            free((*n));
+            extract_min_bst(t->left, n);
+        }
+
+        free(t);
+        free(n);
+        return right;
+    } else if (t->data < elt) {
+        t->right = remove_bst(t->right, elt);
+    } else {
+        t->left = remove_bst(t->left, elt);
+    }
+
+    return t;
 }
 
 void menu(node *t) {
@@ -110,8 +161,20 @@ void menu(node *t) {
             } else {
                 n = insert_bst(n, x);
             }
-            
 
+            break;
+        case 'r':
+            res = scanf(" %d", &x);
+            if (res == EOF || res == 0) {
+                fflush(stdin);
+                break;
+            }
+
+            if (n == NULL) {
+                t = remove_bst(t, x);
+            } else {
+                n = remove_bst(n, x);
+            }
         case 'f':
             res = scanf(" %d", &x);
             if (res == EOF || res == 0) {
