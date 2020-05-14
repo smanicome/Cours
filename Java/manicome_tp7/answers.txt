@@ -1,0 +1,9 @@
+Exercice 1
+
+    1. Le constructeur qui prend 4 arguments est celui qui construira effectivement
+       l'objet. Les deux autres font appel à ce dernier. L'utilisateur de cette classe
+       pourra instancier l'objet de deux manières seulement.
+       Le champs private permet donc de ne pas laisser l'utilisateur créer d'objet
+       contradictoire (valeur non null et une opération).
+    
+    2. 

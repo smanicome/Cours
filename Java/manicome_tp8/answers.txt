@@ -1,0 +1,19 @@
+Exercice 1
+  //1 Fonctionnement normal
+    in A.printX
+    x 1
+    getX() 1
+
+  //2 Fonctionnement normal
+    in B.printX
+    x 2
+    getX() 2
+
+  //3 B est casté en A, donc l'accès direct à x donne 1
+      in B.printX
+      x 1
+      getX() 2
+
+  //4
+    (Rien à afficher)
+

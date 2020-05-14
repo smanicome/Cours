@@ -1,0 +1,29 @@
+Exercice 1
+
+    1. Le code ne compile pas car la méthode translate tente de modifier les champs x et y de la classe Point alors
+       qu'ils ont été définis avec le mot-clé final.
+       Soit on rend la classe mutable dans ce cas on ne change rien à la signature de translate, soit on renvoie
+       un nouvel objet avec les nouvelles coordonées.
+       Le type de retour de translate n'est alors plus void mais Point.
+
+    2. Il faut penser à mettre les champs en private pour les protéger des modifications extérieurs.
+       Ils sont aussi défini final, car pour l'instant on ne modifie pas le rayon et on peut déplacer le cercle avec
+       la méthode translation de la classe Point.
+
+    6. On modifie le même point, il suffit donc de créer une méthode static from dans la classe Point pour créer
+       une copie.
+       On appelle alors cette méthode dans le constructeur de la classe Circle.
+
+    7. On parvient à déplacer le cercle, alors qu'on ne souhaite que déplacer le point. La méthode getCenter doit
+       donc renvoyer une copie.
+
+    10. ... signifie que la méthode peut recevoir 0 ou plus arguments du type préfixé.
+
+Exercice 2
+
+    1. Il est utile de faire de l'héritage si on souhaite ajouter
+      à une classe des propriétés additionnelles mais non essentielles.
+   
+    3. Je ne sais pas quoi conclure de ce TP.
+
+    
