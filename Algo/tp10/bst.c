@@ -1,4 +1,5 @@
 #include "bst.h"
+#include "avl.h"
 #include "visualtree.h"
 
 #include <stdio.h>
@@ -11,9 +12,9 @@ node *find_bst(node *t, int elt) {
         return NULL;
     }
 
-    if (t->data == elt) {
+    if (t->elt == elt) {
         return t;
-    } else if (t->data < elt) {
+    } else if (t->elt < elt) {
         return find_bst(t->right, elt);
     } else {
         return find_bst(t->left, elt);
@@ -31,9 +32,9 @@ node *insert_bst(node *t, int elt) {
         return t;
     }
 
-    if (t->data == elt) {
+    if (t->elt == elt) {
         return t;
-    } else if (t->data < elt) {
+    } else if (t->elt < elt) {
         t->right = insert_bst(t->right, elt);
     } else {
         t->left = insert_bst(t->left, elt);
@@ -84,14 +85,14 @@ node *remove_bst(node *t, int elt) {
         return NULL;
     }
 
-    if (t->data == elt) {
+    if (t->elt == elt) {
         node **n = (node **)malloc(sizeof(node *));
         node *right = t->right;
 
         extract_min_bst(t->left, n);
 
         while ((*n) != NULL) {
-            insert_bst(t->right, (*n)->data);
+            insert_bst(t->right, (*n)->elt);
             free((*n));
             extract_min_bst(t->left, n);
         }
@@ -99,7 +100,7 @@ node *remove_bst(node *t, int elt) {
         free(t);
         free(n);
         return right;
-    } else if (t->data < elt) {
+    } else if (t->elt < elt) {
         t->right = remove_bst(t->right, elt);
     } else {
         t->left = remove_bst(t->left, elt);
@@ -146,7 +147,7 @@ void menu(node *t) {
             }
 
             for (i = 0; i < x; i++)
-                t = insert_n_random(t, i);
+                t = insert_bst(t, i);
 
             break;
         case 'i':

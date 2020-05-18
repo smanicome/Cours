@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/smani/Documents/GitHub/Cours/Algo/tp9/bst.h
+tree.h
+C:/Users/smani/Documents/GitHub/Cours/Algo/tp9/tree.h
+
+C:/Users/smani/Documents/GitHub/Cours/Algo/tp9/tp09.c
+bst.h
+C:/Users/smani/Documents/GitHub/Cours/Algo/tp9/bst.h
+tree.h
+C:/Users/smani/Documents/GitHub/Cours/Algo/tp9/tree.h
+visualtree.h
+C:/Users/smani/Documents/GitHub/Cours/Algo/tp9/visualtree.h
+stdio.h
+-
+stdlib.h
+-
+
+C:/Users/smani/Documents/GitHub/Cours/Algo/tp9/tree.h
+
+C:/Users/smani/Documents/GitHub/Cours/Algo/tp9/visualtree.h
+tree.h
+C:/Users/smani/Documents/GitHub/Cours/Algo/tp9/tree.h
+

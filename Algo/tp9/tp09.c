@@ -13,8 +13,7 @@ int main(int argc, char const *argv[]) {
     int i, n;
 
     n = (int)strtol(argv[1], NULL, 10);
-    /* menu(t); */
-
+     /*menu(t);*/
     t = insert_n_random(t, n);
     t = remove_random(t, 200);
     /*
