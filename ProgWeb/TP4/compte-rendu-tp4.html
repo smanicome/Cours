@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Memory</title>
+    <link rel="stylesheet" href="./compte-rendu-tp4.css">
+</head>
+<body>
+    <header>
+        <h1>MANICOME Compte Rendu de TP4</h1>
+        <h2>Manipulation du DOM, Objet JavaScript</h2>
+    </header>
+
+    <h2>Exercice 1 - Memory</h2>
+    <ol>
+        <li>
+            <h4>
+                Recopiez l'ensemble des ressources, c'est-à-dire, la page Web memory.html,
+                le fichier JavaScript memory.js ainsi que les images dans votre répertoire tp4.
+            </h4>
+        </li>
+        <li>
+            <h4>
+                A quoi sert la fonction MemoryGame ?
+            </h4>
+            <p>
+                La fonction MemoryGame permet de "normaliser" une partie de memory.
+            </p>
+            <h4>
+                Pourquoi le nom de la fonction MemoryGame commence par une majuscule ?
+            </h4>
+            <p>
+                Le nom de la fonction MemoryGame commence par une majuscule car la fonction est comparable à une classe.
+            </p>
+        </li>
+        <li>
+            <h4>
+                Expliquez le code suivant :
+            </h4>
+            <code>
+                MemoryGame.prototype.build = function build(div) { <br>
+                &emsp;// TODO <br>
+                }
+            </code>
+            <h4>A quoi sert MemoryGame.prototype ? </h4>
+            <p>
+                MemoryGame.prototype permet de définir les propriétés intrasèques de la "classe" MemoryGame.
+            </p>
+        </li>
+        <li>
+            <h4>
+                Ecrivez le code de la fonction MemoryGame pour stocker le tableau des images et l'image de dos de carte. <br>
+                Puis écrivez le code de la méthode build afin que le nombre d'images soit affiché à l'intérieur de la balise div prise en paramètre.
+            </h4>
+            <code>
+                function MemoryGame(images, blank) { <br>
+                &emsp;this.images = images; <br>
+                &emsp;this.blank = blank; <br>
+                } <br>
+                <br>
+                MemoryGame.prototype.build = function build(div) { <br>
+                &emsp;div.innerHTML = this.images.length.toString(); <br>
+                }
+            </code>
+        </li>
+        <li>
+            <h4>
+                Pour notre Memory, nous allons créer des paires de cartes, une paire par image. Pour stocker ces cartes, on va créer un tableau
+                cards qui va contenir pour chaque carte l'index de l'image correspondante.
+                <br>
+                Dans un vrai memory, ce tableau des index des images est permuté lors de la création du jeu sinon ce n'est pas très drole.
+                Pour l'instant, nous allons utiliser la fonction <tt>shuffleCards</tt> qui vous a été donnée car cela sera plus facile
+                pour la mise au point du programme.
+                <br>
+                Que fait la fonction <tt>shuffleCards</tt> et en quoi cela aide pour la mise au point du programme ?
+            </h4>
+            <p>
+                La fonction shuffleCards prends un entier en paramètre puis retourne un tableau rempli de paire d'index
+                jusqu'à atteindre la valeur du paramètre. <br>
+                En d'autres termes, cette fonction prépare le jeu sans le mélanger.
+            </p>
+        </li>
+        <li>
+            <h4>
+                Modifiez la méthode build pour afficher autant de cartes que de cases du tableau cards.
+                Chaque carte sera représentée par un div contenant une image (voir le CSS de memory.html).
+                Pour l'instant, chaque carte affichera le même dos d'image.
+            </h4>
+            <code>
+                MemoryGame.prototype.build = function build(div) { <br>
+                &emsp;var cards = shuffleCards(this.images.length); <br>
+                &emsp;var nodes = ""; <br>
+                &emsp;cards.forEach((c) => { <br>
+                &emsp;&emsp;nodes += '<img src="blank.png" alt="blank"/>'; <br>
+                &emsp;}); <br>
+                &emsp;div.innerHTML = nodes; <br>
+                }
+            </code>
+        </li>
+        <li>
+            <h4>
+                Rappeler les deux techniques permettant de modifier l'arbre DOM. <br>
+                Sachant que l'on veut ajouter un écouteur d'évènement pour savoir si on clique sur une carte,
+                quelle solution doit-on choisir ?
+            </h4>
+            <p>
+                On peut soit modifier l'attribut innerHTML d'un élément soit en créer un sous forme de variable avec
+                document.createElement. <br>
+                Puisque nous devons ajouter un écouteur d'événement la deuxième solution est préférable car la variable
+                permet de modifier les attributs plus simplement.
+            </p>
+        </li>
+        <li>
+            <h4>
+                On souhaite ajouter une fonction permettant de savoir lorsque l'utilisateur a cliqué sur une carte,
+                ajouter pour cela une fonction qui sera appelée lorsque l'utilisateur clique sur la carte. <br>
+                Comment faire pour savoir sur quelle carte un utilisateur a cliqué ? <br>
+                Implantez la solution retenue pour que, lorsque l'on clique sur une carte, son index dans le tableau des
+                cartes soit affiché.
+            </h4>
+            <code>
+                node.onclick = function(ev) { <br>
+                &emsp;node.src = "lego" + (c+1) + ".png"; <br>
+                &emsp;node.alt = "lego" + (c+1); <br>
+                };
+            </code>
+        </li>
+        <li>
+            <h4>
+                Modifiez votre code pour afficher la trotteuse en rouge et le cadre en bleu.
+                Réglez à 2 pixels l'épaisseur du trait du cadre.                
+            </h4>
+            <p>
+                La taille de l'aiguille est proportionnelle au rayon du cercle
+            </p>
+            <code>
+                function drawClock() { <br>
+                    &emsp;... <br>
+                    &emsp;context.strokeStyle = "blue"; <br>
+                    &emsp;context.lineWidth = 2; <br>
+                    &emsp;secRad = ((2 * Math.PI) / 60) * date.getSeconds() - Math.PI / 2; <br>
+                    &emsp;drawNeedle(context, secRad, 300*0.9, 2, "red", 300, 300); <br>
+                    &emsp;... <br>
+                } <br><br>
+                function drawLine(context, time, size, width, color, startx, starty) { <br>
+                    &emsp;... <br>
+                    &emsp;context.strokeStyle = color; <br>
+                    &emsp;context.lineWidth = width; <br>
+                    &emsp;... <br>
+                }
+            </code>
+        </li>
+        <li>
+            <h4>
+                Affichez en plus de la trotteuse, l'aiguille des minutes (la grande aiguille) en noire. 
+            </h4>
+            <code>
+                minRad = ((2 * Math.PI) / 60) * date.getMinutes() - Math.PI / 2; <br>
+                drawLine(context, minRad, 300*0.9, 4, "black", 300, 300); <br>
+            </code>
+        </li>
+        <li>
+            <h4>
+                Ajoutez l'aiguille des heures, qui doit être d'une longueur inférieure aux deux autres aiguilles 
+                (disons 80%), mais plus large, toujours en essayant de 'factoriser' le code. 
+            </h4>
+            <code>
+                hourRad = ((2 * Math.PI) / 12) * date.getHours() - Math.PI / 2; <br>
+                drawLine(context, hourRad, 300*0.8, 6, "teal", 300, 300); <br>
+            </code>
+        </li>
+        <li>
+            <h4>
+                Ajoutez 24 traits de graduation ('ticks') en bleue clair, 
+                autour du cadre de l'horloge. Un trait aura une longueur de 3 pixels. 
+            </h4>
+            <p>
+                Le code ci-dessous n'est pas similaire au code utilisé dans l'exo2, 
+                cependant il répond à la question posée. <br>
+                Une longueur de 3px est invisible donc j'ai mis 30px. <br>
+                De même une horloge n'a que 12 tick, donc j'en ai mis <br>
+            </p>
+            <code>
+                for (let i = 0; i < 24; i++) { <br>
+                    &emsp;let pos = ((2 * Math.PI) / 24) * i - Math.PI / 2; <br>
+                    &emsp;let startx = 300 + 300 * Math.cos(pos); <br>
+                    &emsp;let starty = 300 + 300 * Math.sin(pos); <br>
+                    &emsp;drawLine(context, pos, -(ray*0.1), 3, "black", startx, starty); <br>
+                }
+            </code>
+        </li>
+    </ol>
+
+    <h2>Exercice 2 - Horloges de différentes tailles</h2>
+    <ol>
+        <li>
+            <h4>
+                Faites en sorte que la taille de l'horloge puisse varier en fonction de la taille du canvas. <br>
+                Un canvas a une propriété width et une propriété height. <br>
+                Dans le cas où la largeur et la hauteur d'un canvas n'est pas la même, 
+                prenez la valeur minimum entre les deux et laisser des bandes de chaque coté. 
+            </h4>
+            <p>
+                ox et oy étant les coordonnées de l'origine du cadran.
+            </p>
+            <code>
+                function drawClock(canvas) { <br>
+                    &emsp;... <br>
+                    &emsp;let width = canvas.width; <br>
+                    &emsp;let height = canvas.height; <br>
+                    &emsp;let offsetWidth = 0; <br>
+                    &emsp;let offsetHeight = 0; <br>
+                    &emsp;... <br><br>
+                    &emsp;if(width &gt; height) { <br>
+                        &emsp;&emsp;offsetWidth = (width-height)/2; <br>
+                        &emsp;&emsp;width = height; <br>
+                    &emsp;} else if(width &lt; height) { <br>
+                        &emsp;&emsp;offsetHeight = (height-width)/2; <br>
+                        &emsp;&emsp;height = width; <br>
+                    &emsp;} <br><br>
+                    &emsp;let ray = (height/2); <br>
+                    &emsp;let ox = offsetWidth+ray; <br>
+                    &emsp;let oy = offsetHeight+ray; <br><br>
+                    &emsp;... <br>
+                }
+            </code>
+        </li>
+        <li>
+            <h4>
+                Faites en sorte d'avoir une fonction startClock qui prend en paramètre l'id d'un canvas qui sert 
+                d'unique point d'entrée pour faire fonctionner une horloge. <br>
+                Testez avec l'affichage des 2 horloges de tailles différentes 
+                (on est d'accord, on peut en ajouter plus !). <br>
+            </h4>
+            <p>
+                Pour cette question, la fonction startClock permet d'ajouter le canvas concerné dans un tableau. <br>
+                J'utilise la fonction drawIt, appelée à un interval de 1 seconde dès que la page est chargée, 
+                pour construire toutes les horloges dans les canvas préalablement stockés.
+            </p>
+        </li>
+        <li>
+            <h4>
+                Question top moumoute, faites en sorte de garantir que les aiguilles des différentes horloges 
+                soient synchrones (i.e. misent à jour toutes en même temps). 
+            </h4>
+            <p>
+                Etant donné qu'on utilise déjà une unique date et un unique setInterval pour afficher 
+                toutes les horloges, on ne peut pas faire plus synchrones.
+            </p>
+        </li>
+    </ol>
+
+    <h2>Conclusion</h2>
+    <p>
+        Ce TP est pour moi le plus simple réalisé jusqu'à présent, à part les canvas je connaissait déjà
+        tout le reste.
+    </p>
+</body>
+</html>
