@@ -225,71 +225,21 @@
                 setTimout(handler: ..., timout: 500);
             </p>
         </li>
-    </ol>
-
-    <h2>Exercice 2 - Horloges de différentes tailles</h2>
-    <ol>
         <li>
             <h4>
-                Faites en sorte que la taille de l'horloge puisse varier en fonction de la taille du canvas. <br>
-                Un canvas a une propriété width et une propriété height. <br>
-                Dans le cas où la largeur et la hauteur d'un canvas n'est pas la même, 
-                prenez la valeur minimum entre les deux et laisser des bandes de chaque coté. 
+                Enfin, modifiez shuffleCards pour que le tableau des cartes soit mélangé de façon aléatoire (on tire aléatoirement deux
+                valeurs avec Math.random, on les swap, autant de fois qu'il y a de cartes).
             </h4>
-            <p>
-                ox et oy étant les coordonnées de l'origine du cadran.
-            </p>
             <code>
-                function drawClock(canvas) { <br>
-                    &emsp;... <br>
-                    &emsp;let width = canvas.width; <br>
-                    &emsp;let height = canvas.height; <br>
-                    &emsp;let offsetWidth = 0; <br>
-                    &emsp;let offsetHeight = 0; <br>
-                    &emsp;... <br><br>
-                    &emsp;if(width &gt; height) { <br>
-                        &emsp;&emsp;offsetWidth = (width-height)/2; <br>
-                        &emsp;&emsp;width = height; <br>
-                    &emsp;} else if(width &lt; height) { <br>
-                        &emsp;&emsp;offsetHeight = (height-width)/2; <br>
-                        &emsp;&emsp;height = width; <br>
-                    &emsp;} <br><br>
-                    &emsp;let ray = (height/2); <br>
-                    &emsp;let ox = offsetWidth+ray; <br>
-                    &emsp;let oy = offsetHeight+ray; <br><br>
-                    &emsp;... <br>
+                var j, x; <br>
+                for (let i = cards.length - 1; i > 0; i--) { <br>
+                &emsp;j = Math.floor(Math.random() * (i + 1)); <br>
+                &emsp;x = cards[i]; <br>
+                &emsp;cards[i] = cards[j]; <br>
+                &emsp;cards[j] = x; <br>
                 }
             </code>
         </li>
-        <li>
-            <h4>
-                Faites en sorte d'avoir une fonction startClock qui prend en paramètre l'id d'un canvas qui sert 
-                d'unique point d'entrée pour faire fonctionner une horloge. <br>
-                Testez avec l'affichage des 2 horloges de tailles différentes 
-                (on est d'accord, on peut en ajouter plus !). <br>
-            </h4>
-            <p>
-                Pour cette question, la fonction startClock permet d'ajouter le canvas concerné dans un tableau. <br>
-                J'utilise la fonction drawIt, appelée à un interval de 1 seconde dès que la page est chargée, 
-                pour construire toutes les horloges dans les canvas préalablement stockés.
-            </p>
-        </li>
-        <li>
-            <h4>
-                Question top moumoute, faites en sorte de garantir que les aiguilles des différentes horloges 
-                soient synchrones (i.e. misent à jour toutes en même temps). 
-            </h4>
-            <p>
-                Etant donné qu'on utilise déjà une unique date et un unique setInterval pour afficher 
-                toutes les horloges, on ne peut pas faire plus synchrones.
-            </p>
-        </li>
     </ol>
-
-    <h2>Conclusion</h2>
-    <p>
-        Ce TP est pour moi le plus simple réalisé jusqu'à présent, à part les canvas je connaissait déjà
-        tout le reste.
-    </p>
 </body>
 </html>
