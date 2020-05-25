@@ -1,0 +1,15 @@
+EXERCICE 1
+    1. Pour éviter toute manipulation par l'utilisateur on peut mettre le modifacteur par défaut.
+
+    2. java src/fr/umlv/data/Link
+
+EXERCICE 2
+    1. IndexOutOfBoundsException
+
+    4. Le cast permet d'assurer au compilateur la nature d'une variable.
+       Caster n'est pas une bonne pratique car c'est rendre le code faussement générique.
+
+EXERCICE 3
+    1. Les types paramétré permettent d'avoir un code indépendant du type de la donnée entrant
+
+    2. Il faut qu'on puisse utiliser la méthode equals comme prévu
