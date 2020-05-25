@@ -119,6 +119,27 @@
                 cartes soit affiché.
             </h4>
             <code>
+                var nodes = cards.map((c, index) => { <br>
+                &emsp;var node = document.createElement("img"); <br>
+                &emsp;node.src = "blank.png"; <br>
+                &emsp;node.alt = "blank"; <br>
+                &emsp;node.onclick = function(ev) { <br>
+                &emsp;&emsp;console.log(index); <br>
+                &emsp;}; <br>
+                &emsp;return node; <br>
+                });
+            </code>
+        </li>
+        <li>
+            <h4>
+                On souhaite maintenant pouvoir afficher l'image correspondant à une carte lorsque l'on clique sur la carte. <br>
+                Le problème est que le tableau des images doit être stocké dans un objet MemoryGame et qu'il faut que cet  <br>
+                objet soit accessible à la fonction qui est exécutée lors d'un clic. <br>
+                Comment faire pour que le tableau des images soit accessible lors d'un clic ? <br>
+                Implantez votre solution pour que, lorsque l'on clique sur une carte, l'image correspondante s'affiche. <br>
+                Rappel: l'élement DOM correspondant à une image possède une propriété src.
+            </h4>
+            <code>
                 node.onclick = function(ev) { <br>
                 &emsp;node.src = "lego" + (c+1) + ".png"; <br>
                 &emsp;node.alt = "lego" + (c+1); <br>
@@ -127,67 +148,82 @@
         </li>
         <li>
             <h4>
-                Modifiez votre code pour afficher la trotteuse en rouge et le cadre en bleu.
-                Réglez à 2 pixels l'épaisseur du trait du cadre.                
+                Il faut maintenant implanter la mécanique du jeu.
+                <br>
+                Comme on découvre les cartes, une par une, il faut se souvenir de la carte précédente (si elle existe) pour savoir si
+                le jeu est dans l'un des états suivant :
+                <ol>
+                    <li>on doit découvrir 2 cartes</li>
+                    <li>on doit découvrir 1 carte (l'autre est déjà connue)</li>
+                    <li>deux cartes ont été découvertes</li>
+                </ol>
+                <br>
+                Sachant que l'on appelle selection la carte dont on se souvient, écrivez en pseudo-code, l'algorithme
+                qui prend en paramètre la carte sur laquelle on vient de cliquer et qui implante la mécanique de jeu.
+                <br>
+                Puis implantez votre algorithme en JavaScript
             </h4>
             <p>
-                La taille de l'aiguille est proportionnelle au rayon du cercle
+                Le code en gras est utilisé pour justifier la question 11.
             </p>
             <code>
-                function drawClock() { <br>
-                    &emsp;... <br>
-                    &emsp;context.strokeStyle = "blue"; <br>
-                    &emsp;context.lineWidth = 2; <br>
-                    &emsp;secRad = ((2 * Math.PI) / 60) * date.getSeconds() - Math.PI / 2; <br>
-                    &emsp;drawNeedle(context, secRad, 300*0.9, 2, "red", 300, 300); <br>
-                    &emsp;... <br>
-                } <br><br>
-                function drawLine(context, time, size, width, color, startx, starty) { <br>
-                    &emsp;... <br>
-                    &emsp;context.strokeStyle = color; <br>
-                    &emsp;context.lineWidth = width; <br>
-                    &emsp;... <br>
-                }
+                node.onclick = (function(i){ <br>
+                &emsp;return function() { <br>
+                &emsp;&emsp;<b>if (discovered[i]) return;</b> <br>
+                <br>
+                &emsp;&emsp;console.log(i); <br>
+                &emsp;&emsp;nodes[i].src = "lego" + (cards[i]+1) + ".png"; <br>
+                &emsp;&emsp;nodes[i].alt = "lego" + (cards[i]+1); <br>
+                <br>
+                &emsp;&emsp;<b>discovered[i] = true</b> <br>
+                &emsp;&emsp;flippedCards.push(cards[i]); <br>
+                &emsp;&emsp;flipped++; <br>
+                <br>
+                &emsp;&emsp;if (flipped === 2) { <br>
+                &emsp;&emsp;&emsp;console.log(flippedCards); <br>
+                &emsp;&emsp;&emsp;if (flippedCards.some((card) => card !== cards[i])) { <br>
+                &emsp;&emsp;&emsp;&emsp;flippedCards.forEach( function(card) { <br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;var idx = cards.indexOf(card); <br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;<b>discovered[idx] = false;</b> <br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;nodes[idx].src = "blank.png"; <br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;nodes[idx].alt = "blank" <br>
+                <br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;idx = cards.lastIndexOf(card); <br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;<b>discovered[idx] = false;</b> <br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;nodes[idx].src = "blank.png"; <br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;nodes[idx].alt = "blank"; <br>
+                &emsp;&emsp;&emsp;&emsp;}); <br>
+                <br>
+                &emsp;&emsp;&emsp;} <br>
+                &emsp;&emsp;&emsp;flipped = 0; <br>
+                &emsp;&emsp;&emsp;flippedCards = []; <br>
+                &emsp;&emsp;} <br>
+                &emsp;}; <br>
+                })(i);
             </code>
         </li>
         <li>
             <h4>
-                Affichez en plus de la trotteuse, l'aiguille des minutes (la grande aiguille) en noire. 
-            </h4>
-            <code>
-                minRad = ((2 * Math.PI) / 60) * date.getMinutes() - Math.PI / 2; <br>
-                drawLine(context, minRad, 300*0.9, 4, "black", 300, 300); <br>
-            </code>
-        </li>
-        <li>
-            <h4>
-                Ajoutez l'aiguille des heures, qui doit être d'une longueur inférieure aux deux autres aiguilles 
-                (disons 80%), mais plus large, toujours en essayant de 'factoriser' le code. 
-            </h4>
-            <code>
-                hourRad = ((2 * Math.PI) / 12) * date.getHours() - Math.PI / 2; <br>
-                drawLine(context, hourRad, 300*0.8, 6, "teal", 300, 300); <br>
-            </code>
-        </li>
-        <li>
-            <h4>
-                Ajoutez 24 traits de graduation ('ticks') en bleue clair, 
-                autour du cadre de l'horloge. Un trait aura une longueur de 3 pixels. 
+                Comment faire pour ne pas prendre en compte les cartes déjà retournées (il y a deux cas) ? <br>
+                Modifiez votre programme en conséquence.
             </h4>
             <p>
-                Le code ci-dessous n'est pas similaire au code utilisé dans l'exo2, 
-                cependant il répond à la question posée. <br>
-                Une longueur de 3px est invisible donc j'ai mis 30px. <br>
-                De même une horloge n'a que 12 tick, donc j'en ai mis <br>
+                Pour éviter cela j'utilise un tableau discovered de taille n (pour n cartes), si la carte d'index i est retournée,
+                même si cela n'est pas définitif, la valeur true est stockée dans la case i de discovered.
+                Si la paire est invalide la valeur est inversée, donc mise à false. <br>
+                Cette même valeur est utiliser au début de la fonction onclick, pour executer ou non la suite de la fonction. <br>
+                Les lignes de code relatives sont en gras ci-dessus.
             </p>
-            <code>
-                for (let i = 0; i < 24; i++) { <br>
-                    &emsp;let pos = ((2 * Math.PI) / 24) * i - Math.PI / 2; <br>
-                    &emsp;let startx = 300 + 300 * Math.cos(pos); <br>
-                    &emsp;let starty = 300 + 300 * Math.sin(pos); <br>
-                    &emsp;drawLine(context, pos, -(ray*0.1), 3, "black", startx, starty); <br>
-                }
-            </code>
+        </li>
+        <li>
+            <h4>
+                Si l'image n'est pas identique, on souhaite avoir le temps de voir la face de la seconde carte avant de les retourner.
+                Pour cela, le plus simple est d'attendre 500 ms avant de retourner les cartes. <br>
+                Comment écrire cela en JavaScript ?
+            </h4>
+            <p>
+                setTimout(handler: ..., timout: 500);
+            </p>
         </li>
     </ol>
 
