@@ -1,0 +1,1 @@
+void write_tree(node *t);
