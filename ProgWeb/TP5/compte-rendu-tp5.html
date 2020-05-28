@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Memory</title>
+    <link rel="stylesheet" href="./compte-rendu-tp5.css">
+</head>
+<body>
+    <header>
+        <h1>MANICOME Compte Rendu de TP5</h1>
+        <h2>Requêtes AJAX</h2>
+    </header>
+
+    <h2>Exercice 1 - Un panier de fruits</h2>
+    <div>
+        On cherche à afficher le contenu d'un panier de fruit en faisant une requête AJAX sur le fichier <tt>fruits.json</tt>
+        situé dans le même répertoire que le fichier <tt>exo1.html</tt> puis en modifiant le DOM pour ajouter
+        une lignes par fruit dans à une table HTML.
+    </div>
+    <br>
+    <ol>
+        <li>
+            <h4>
+                Dans un premier temps, recopier les fichiers <tt>exo1.html</tt>, <tt>basket.js</tt> et
+                <tt>fruits.json</tt>
+                contenu dans le répertoire <a href="src/td05">td05</a>
+                <br>
+                Rappeler quels sont les deux types d'objets JavaScript que l'on peut lire et écrire au format JSON ?
+                <br>
+                Qu'elle est le type d'objet stocké dans le fichier <tt>fruits.json</tt> .
+            </h4>
+            <p>
+                Les deux types d'objets JavaScript que l'on peut lire et écrire au format JSON sont des arrays et des map
+                <br>
+                Le fichier fruit.json contient un objet de type map.
+            </p>
+        </li>
+        <li>
+            <h4>
+                On cherche à écrire une requête AJAX qui va lire le fichier <tt>fruits.json"</tt> sur le disque en local.
+                <br>
+                Créez un objet <tt>XMLHttpRequest</tt>, utilisez la méthode <tt>open()</tt> pour créer une requête sur
+                le fichier <tt>fruits.json</tt>,
+                puis envoyez la requête au serveur (ou au système de fichier si vous testez en local) avec la méthode
+                <tt>send</tt>.
+                <br>
+                Comment faire pour savoir si la requête a réussi ou échoué en utilisant les outils de développement de
+                votre navigateur ?
+                <br>
+                Testez si votre requête AJAX fonctionne avec Firefox et avec Chrome ? Que se passe-t-il dans chaque cas,
+                pourquoi ?
+            </h4>
+            <code>
+                var ajax = new XMLHttpRequest(); <br>
+                ajax.onreadystatechange = function() { <br>
+                &emsp;if (ajax.readyState !== 4) { <br>
+                &emsp;&emsp;return; <br>
+                &emsp;} <br>
+                &emsp;if(ajax.status !== 200) { <br>
+                &emsp;&emsp;console.log("error " + ajax.status); <br>
+                &emsp;} else { <br>
+                &emsp;&emsp;console.log(ajax.responseText); <br>
+                &emsp;} <br>
+                }; <br>
+                ajax.open("GET", "fruits.json", true); <br>
+                ajax.overrideMimeType("application/json"); <br>
+                ajax.send();
+            </code>
+            <p>
+                Pour voir si la requête à échouée il faut regarder l'onglet console de l'outils de développement du navigateur. <br>
+                Sur Chrome et sur Firefox la requête a été bloquée en raison de la politique CORS.
+                C'est une mesure de sécurité du navigateur.
+            </p>
+        </li>
+        <li>
+            <h4>
+                Pour résoudre le problème, on va utiliser un serveur de demo écrit en Java.
+                Récupérer le fichier <tt>JExpress.java</tt> et lancer le dans un autre terminal avec la commande <tt>java
+                    JExpress.java</tt>
+                <br>
+                Note: Pas besoin de compiler le fichier, vous demanderez à votre prof de Java, pourquoi plus tard.
+                <br>
+                Comment faire pour afficher le contenu du fichier <tt>exo1.html</tt> en utilisant le serveur ?
+            </h4>
+        </li>
+        <li>
+            <h4>
+                Ajoutez une fonction pour écouter les évènements de la requète HTTP en enregistrant une fonction dans
+                <tt>onreadystatechange</tt>.
+                Si la requête a réussi, affichez le résultat de la propriété <tt>responseText</tt> dans la console.
+            </h4>
+        </li>
+        <li>
+            <h4>
+                Transformez la chaine de caractère stockée dans <tt>responseText</tt> au format JSON en objet JavaScript.
+                <br>
+                Quel est le type d'objet JavaScript obtenu ? Est-ce bien ce que l'on attendait ?
+            </h4>
+        </li>
+        <li>
+            <h4>
+                Récupérez une référence sur la table HTML en JavaScript et modifiez la table pour ajouter une ligne par
+                fruit,
+                avec deux colonnes, une contenant le nom du fruit et l'autre la quantité du fruit.
+                <br>
+                Rappel: il existe toujours les méthodes <tt>map</tt> et <tt>join</tt> sur les tableaux.
+            </h4>
+        </li>
+        <li>
+            <h4>
+                On souhaite maintenant que le div <tt>quantity</tt> de la page HTML soit mis à jour avec la somme des
+                quantités de tous les fruits.
+                <br>
+                Note: il existe toujours une méthode <tt>reduce</tt> sur les tableaux.
+            </h4>
+        </li>
+    </ol>
+
+
+    <h4>Exercice 2 - Un panier de fruits (2)</h4>
+    <div>
+        On cherche à améliorer le code précédent pour calculer le prix du panier (en plus de la quantité de tous les fruits).
+        <br>
+        Pour cela, on va créer un autre fichier JSON, <tt>prices.json</tt>, contenant le prix d'une orange, d'une banane et d'une poire,
+        qui sera chargé pour calculer le prix d'un panier.
+    </div>
+    <br>
+    <ol>
+        <li>
+            <h4>
+                Aller chercher le fichier <tt>exo2.html</tt> et recopier votre fichier <tt>basket.js</tt>
+                dans un fichier <tt>basket2.js</tt>.
+                <br>
+                Note: vérifier bien que vous ne modifier plus le fichier <tt>basket.js</tt> sinon,
+                je pourrais pas corriger l'exo1 et l'exo2 indépendamment !
+            </h4>
+        </li>
+        <li>
+            <h4>
+                Quelle doit être le type d'objet dans le fichier <tt>prices.json</tt> ?
+                <br>
+                Attention, si vous ne choisissez pas le bon type, la suite du TP va être longue et compliquée.
+                <br>
+                Ecrivez le fichier <tt>prices.json</tt> sachant que le prix d'une orange est 10 euros, le prix d'une
+                banane est 20 euros et
+                le prix d'une poire est 5 euros.
+                <br>
+                Vérifiez que votre fichier respecte bien le format JSON en utilisant le validateur de JSON
+                <a href="http://jsonlint.com/">http://jsonlint.com/</a>.
+            </h4>
+        </li>
+        <li>
+            <h4>
+                Faites en sorte que le contenu du fichier <tt>prices.json</tt> soit chargée par une requête AJAX
+                après que le contenu du fichier <tt>prices.json</tt> ait été chargé.
+                <br>
+                Important: sachant que l'on charge déjà le fichier <tt>fruits.json</tt> avec une requête AJAX, faire
+                en sorte qu'il y ait un seul code de chargement de requête AJAX (en faisant une fonction).
+            </h4>
+        </li>
+        <li>
+            <h4>Faites en sorte de calculer le prix du panier et de mettre à jour la page Web avec le prix.</h4>
+        </li>
+        <li>
+            <h4>
+                Commenter le code qui fait les requètes AJAX et utiliser le mécanisme de Promise pour ré-écrire votre
+                code.
+                <br>
+                Pourquoi le mécanisme de Promise (si on l'utilise correctement) est plus efficace ?
+            </h4>
+        </li>
+    </ol>
+</body>
+</html>
