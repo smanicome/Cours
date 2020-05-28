@@ -43,8 +43,8 @@ void write_tree_aux(FILE *f, node *t) {
 
 void write_tree(node *t) {
   FILE *f;
-  f = write_begin("current-tree.dot");
+  f = write_begin("current-avl-tree.dot");
   write_tree_aux(f, t);
   write_end(f);
-  system("dot -Tpdf current-tree.dot -o current-tree.pdf");
+  system("dot -Tpdf current-avl-tree.dot -o current-avl-tree.pdf");
 }

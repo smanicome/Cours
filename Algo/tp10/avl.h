@@ -28,4 +28,20 @@ void display_infix(node *t);
 
 void display_suffix(node *t);
 
+node *rotate_right(node *y);
+
+node *rotate_left(node *y);
+
+node *rotate_right_left(node *t);
+
+node *rotate_left_right(node *t);
+
+void update_height(node *t);
+
+node *rebalance(node *t);
+
+int compute_balance(node *t);
+
+node *insert_avl(node *t, int elt);
+
 #endif /* AVL_H */

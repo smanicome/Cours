@@ -1,8 +1,8 @@
 CC=gcc
 CFLAGS=-Wall -ansi
 LDFLAGS=-lm
-DEPS=visualtree.h avl.h
-OBJ=visualtree.o avl.o
+DEPS=visualtree.h avl.h bst.h
+OBJ=visualtree.o avl.o bst.o
 
 %.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
@@ -12,4 +12,4 @@ tp10: tp10.o $(OBJ)
 
 .PHONY: clean
 clean:
-	rm -f $(OBJ) tp10 tp10.o current-tree.dot current-tree.pdf
+	rm -f $(OBJ) tp10 tp10.o current-avl-tree.dot current-avl-tree.pdf

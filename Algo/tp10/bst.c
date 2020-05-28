@@ -15,10 +15,20 @@ node *find_bst(node *t, int elt) {
     if (t->elt == elt) {
         return t;
     } else if (t->elt < elt) {
-        return find_bst(t->right, elt);
+        return find_avl(t->right, elt);
     } else {
-        return find_bst(t->left, elt);
+        return find_avl(t->left, elt);
     }
+}
+
+int height(node *t) {
+    if (t == NULL) {
+        return -1;
+    }
+    int left = height(t->left) + 1;
+    int right = height(t->right) + 1;
+
+    return left > right ? left : right;
 }
 
 /**
@@ -109,9 +119,8 @@ node *remove_bst(node *t, int elt) {
     return t;
 }
 
-void menu(node *t) {
+node *menu(node *t) {
     node *n = NULL;
-    int i;
     int x;
     int res;
 
@@ -146,8 +155,7 @@ void menu(node *t) {
                 break;
             }
 
-            for (i = 0; i < x; i++)
-                t = insert_bst(t, i);
+            t = insert_n_random(t, x);
 
             break;
         case 'i':
@@ -158,9 +166,9 @@ void menu(node *t) {
             }
 
             if (n == NULL) {
-                t = insert_bst(t, x);
+                t = insert_avl(t, x);
             } else {
-                n = insert_bst(n, x);
+                n = insert_avl(n, x);
             }
 
             break;
@@ -197,4 +205,6 @@ void menu(node *t) {
 
         write_tree(t);
     } while (choice != 'q');
+
+    return t;
 }
