@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="99cf5522-ed57-4cc4-968d-d30431e64e16" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../manicome_tp9/fr/umlv/data/Link.java" afterDir="false" />
-    </list>
+    <list default="true" id="99cf5522-ed57-4cc4-968d-d30431e64e16" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,6 +35,7 @@
       <updated>1589815700077</updated>
       <workItem from="1589815702526" duration="32000" />
       <workItem from="1589815754481" duration="6000" />
+      <workItem from="1590829280049" duration="191000" />
     </task>
     <servers />
   </component>
