@@ -5,12 +5,12 @@
 #include <stdlib.h>
 
 int main(int argc, char *argv[]) {
-    if (argc < 2) {
+    /*if (argc < 2) {
         printf("Usage: %s <number above 0>", argv[0]);
         exit(1);
     }
 
-    int n = (int)strtol(argv[1], NULL, 10);
+    int n = (int)strtol(argv[1], NULL, 10);*/
 
     /* node *t = NULL;
     t = menu(t);
@@ -31,7 +31,8 @@ int main(int argc, char *argv[]) {
     printf("Ok!\n"); */
 
     node *t = NULL;
-
+    t = scan_tree();
+    write_tree(t);
     /* t = insert_n_random(t, n);
     time ./tp10 6000000
 

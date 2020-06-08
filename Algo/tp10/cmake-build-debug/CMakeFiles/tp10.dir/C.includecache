@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/smani/Documents/GitHub/Cours/Algo/tp10/avl.h
+
+C:/Users/smani/Documents/GitHub/Cours/Algo/tp10/bst.h
+avl.h
+C:/Users/smani/Documents/GitHub/Cours/Algo/tp10/avl.h
+
+C:/Users/smani/Documents/GitHub/Cours/Algo/tp10/tp10.c
+avl.h
+C:/Users/smani/Documents/GitHub/Cours/Algo/tp10/avl.h
+bst.h
+C:/Users/smani/Documents/GitHub/Cours/Algo/tp10/bst.h
+visualtree.h
+C:/Users/smani/Documents/GitHub/Cours/Algo/tp10/visualtree.h
+stdio.h
+-
+stdlib.h
+-
+
+C:/Users/smani/Documents/GitHub/Cours/Algo/tp10/visualtree.h
+avl.h
+C:/Users/smani/Documents/GitHub/Cours/Algo/tp10/avl.h
+

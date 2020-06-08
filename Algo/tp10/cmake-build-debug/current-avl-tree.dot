@@ -1,0 +1,19 @@
+digraph tree {
+  node [shape=record,height=.1]
+  edge [tailclip=false, arrowtail=dot, dir=both];
+
+  n00A529D0 [label="<left> |{ <value> 4 | <height> 0 }| <right>"];
+  n00A529D0:left:c -> n00A529E8:value;
+  n00A529E8 [label="<left> |{ <value> 3 | <height> 0 }| <right>"];
+  n00A529E8:left:c -> n00A52A00:value;
+  n00A52A00 [label="<left> |{ <value> 2 | <height> 0 }| <right>"];
+  n00A529E8:right:c -> n00A52A18:value;
+  n00A52A18 [label="<left> |{ <value> 14 | <height> 0 }| <right>"];
+  n00A52A18:left:c -> n00A52A30:value;
+  n00A52A30 [label="<left> |{ <value> 12 | <height> 0 }| <right>"];
+  n00A52A30:left:c -> n00A52A48:value;
+  n00A52A48 [label="<left> |{ <value> 10 | <height> 0 }| <right>"];
+  n00A52A18:right:c -> n00A52A60:value;
+  n00A52A60 [label="<left> |{ <value> 15 | <height> 0 }| <right>"];
+
+}
