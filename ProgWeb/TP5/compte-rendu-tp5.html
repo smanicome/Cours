@@ -23,7 +23,7 @@
             <h4>
                 Dans un premier temps, recopier les fichiers <tt>exo1.html</tt>, <tt>basket.js</tt> et
                 <tt>fruits.json</tt>
-                contenu dans le répertoire <a href="src/td05">td05</a>
+                contenu dans le répertoire td05
                 <br>
                 Rappeler quels sont les deux types d'objets JavaScript que l'on peut lire et écrire au format JSON ?
                 <br>
@@ -82,6 +82,10 @@
                 <br>
                 Comment faire pour afficher le contenu du fichier <tt>exo1.html</tt> en utilisant le serveur ?
             </h4>
+            <p>
+                On utilis ce lien http://localhost:3000/exo1.html, puisque le serveur est lancé 
+                sur le port 3000.
+            </p>
         </li>
         <li>
             <h4>
@@ -89,6 +93,18 @@
                 <tt>onreadystatechange</tt>.
                 Si la requête a réussi, affichez le résultat de la propriété <tt>responseText</tt> dans la console.
             </h4>
+            <code>
+                ajax.onreadystatechange = function() { <br>
+                &emsp;if (ajax.readyState !== 4) { <br>
+                &emsp;&emsp;return; <br>
+                &emsp;} <br>
+                &emsp;if(ajax.status !== 200) { <br>
+                &emsp;&emsp;console.log("error " + ajax.status); <br>
+                &emsp;} else { <br>
+                &emsp;&emsp;console.log(ajax.responseText); <br>
+                &emsp;} <br>
+                };
+            </code>
         </li>
         <li>
             <h4>
@@ -96,6 +112,10 @@
                 <br>
                 Quel est le type d'objet JavaScript obtenu ? Est-ce bien ce que l'on attendait ?
             </h4>
+            <p>
+                Le type d'objet JavaScript obtenu est un tableau d'objet, cela correspond bien à 
+                la structure sous format JSON.
+            </p>
         </li>
         <li>
             <h4>
@@ -105,6 +125,47 @@
                 <br>
                 Rappel: il existe toujours les méthodes <tt>map</tt> et <tt>join</tt> sur les tableaux.
             </h4>
+            <code>
+                window.onload = loadData; <br>
+                <br>
+                function setTableHeader() { <br>
+                &emsp;var table = document.getElementById("basket"); <br>
+                <br>
+                &emsp;let header = document.createElement("th");<br>
+                &emsp;let header1 = document.createElement("td");<br>
+                &emsp;let header2 = document.createElement("td");<br>
+                <br>
+                &emsp;header1.innerHTML = "Fruits";<br>
+                &emsp;header2.innerHTML = "Quantité";<br>
+                <br>
+                &emsp;header.appendChild(header1);<br>
+                &emsp;header.appendChild(header2);<br>
+                &emsp;table.appendChild(header);<br>
+                }<br>
+                <br>
+                function setTableContent() {<br>
+                &emsp;var table = document.getElementById("basket");<br>
+                <br>
+                &emsp;responseParsed.forEach(element => {<br>
+                &emsp;&emsp;let row = document.createElement("tr");<br>
+                <br>
+                &emsp;&emsp;let fruit = document.createElement("td");<br>
+                &emsp;&emsp;fruit.innerHTML = element.name;<br>
+                &emsp;&emsp;let quantity = document.createElement("td");<br>
+                &emsp;&emsp;quantity.innerHTML = element.quantity;<br>
+                <br>
+                &emsp;&emsp;row.appendChild(fruit);<br>
+                &emsp;&emsp;row.appendChild(quantity);<br>
+                <br>
+                &emsp;&emsp;table.appendChild(row);<br>
+                &emsp;});<br>
+                }<br>
+                <br>
+                function changeTable() {<br>
+                &emsp;setTableHeader();<br>
+                &emsp;setTableContent();<br>
+                }
+            </code>
         </li>
         <li>
             <h4>
@@ -113,6 +174,13 @@
                 <br>
                 Note: il existe toujours une méthode <tt>reduce</tt> sur les tableaux.
             </h4>
+            <code>
+                function changeQuantity() { <br>
+                &emsp;var quantityTag = document.getElementById("quantity"); <br>
+                &emsp;var quantities = responseParsed.map(element => element.quantity); <br>
+                &emsp;quantityTag.innerHTML = quantities.reduce((accumulator, currentValue) => accumulator + currentValue); <br>
+                }
+            </code>
         </li>
     </ol>
 
@@ -148,6 +216,7 @@
                 Vérifiez que votre fichier respecte bien le format JSON en utilisant le validateur de JSON
                 <a href="http://jsonlint.com/">http://jsonlint.com/</a>.
             </h4>
+            <p>Pour que cela soit efficace, on utilise le nom des fruits comme clé et leurs prix comme valeur</p>
         </li>
         <li>
             <h4>
@@ -170,5 +239,11 @@
             </h4>
         </li>
     </ol>
+    <h4>Conclusion</h4>
+    <p>
+        Ce tp a été l'occasion de mieux comprendre le fonctionnement des promesses. <br>
+        Je connaissais déjà les requêtes AJAX et les données en format JSON, donc le tp n'a 
+        pas posé de problème.
+    </p>
 </body>
 </html>
