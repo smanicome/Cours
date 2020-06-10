@@ -80,8 +80,6 @@ int extract_min(heap *h) {
     /* i = 0 */
     n = h->tree[i];
     h->tree[i] = h->tree[h->size - 1];
-    printf("h->tree[0]: %d\n", h->tree[0]);
-    printf("h->tree[h->size]: %d\n", h->tree[h->size - 1]);
 
     (h->size)--;
 
