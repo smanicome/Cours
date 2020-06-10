@@ -1,23 +1,10 @@
+#include "sort.h"
+#include "swap.h" 
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 
-#define BUFF_SIZE 20
-
-typedef struct cell {
-    char *first_name;
-    char *last_name;
-    int age;
-    struct cell *next;
-} Cell, *List;
-
-Cell *allocate_cell(char *first, char *last, int age);
-List read_file();
-int age_order(Cell *p1, Cell *p2);
-int name_order(Cell *p1, Cell *p2);
-void ordered_insertion(List *l, Cell *new, int order_func(Cell *, Cell *));
-void print_list(List l);
-void free_list(List l);
+#define BUFF_SIZE 100
 
 int main() {
     List l;
@@ -53,11 +40,18 @@ List read_file() {
         first = (char *)malloc((strlen(buffer) + 1) * sizeof(char));
         strcpy(first, buffer);
 
-        fscanf(fd, "%s", buffer);
+        res = fscanf(fd, "%s", buffer);
+        if (res == EOF) {
+            break;
+        }
+
         last = (char *)malloc((strlen(buffer) + 1) * sizeof(char));
         strcpy(last, buffer);
 
-        fscanf(fd, "%d", &age);
+        res = fscanf(fd, "%d", &age);
+        if (res == EOF) {
+            break;
+        }
 
         c = allocate_cell(first, last, age);
         ordered_insertion(&l, c, age_order);
@@ -91,29 +85,32 @@ int name_order(Cell *p1, Cell *p2) {
     return strcmp(p1->first_name, p2->first_name);
 }
 
-void ordered_insertion(List *l, Cell *new, int order_func(Cell *, Cell *)) {
-    Cell *previous;
+void ordered_insertion(List *l, Cell *newC, int order_func(Cell *, Cell *)) {
+    Cell *previous = NULL;
+    Cell *c;
     
-	for (Cell *c = *l; c != NULL && order_func(new, c) == 1; c = c->next) {
+    for (c = *l; c != NULL && order_func(newC, c) == 1; c = c->next) {
         previous = c;
     }
 
-	if (previous != NULL) {
-        new->next = previous->next;
-        previous->next = new;
+    if (previous != NULL) {
+        newC->next = previous->next;
+        previous->next = newC;
     } else {
-        *l = new;
+        *l = newC;
     }
 }
 
 void print_list(List l) {
-    for (Cell *c = l; c != NULL; c = c->next) {
+    Cell *c;
+    for (c = l; c != NULL; c = c->next) {
         printf("%s %s %d\n", c->first_name, c->last_name, c->age);
     }
 }
 
 void free_list(List l) {
-	for (Cell* c = l; c != NULL;) {
+    Cell *c;
+    for (c = l; c != NULL;) {
         Cell* next = c->next;
         free(c->first_name);
         free(c->last_name);
