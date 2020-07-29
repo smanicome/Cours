@@ -6,26 +6,34 @@
 
 #define MAX_HEAP_SIZE 100
 
+int decreasing_comparator(const void *a, const void *b) {
+    int x = *(const int*) a;
+    int y = *(const int*) b;
+    return y - x;
+}
+
 int main(int argc, char const *argv[]) {
+    if (argc < 2) {
+        printf("Usage: %s <array_size>", argv[0]);
+    }
+
     int i;
-    heap *h = create_heap(MAX_HEAP_SIZE);
+    int n;
+
+    n = (int) strtol(argv[1], NULL, 10);
+    heap *h = create_heap(n);
 
     srand(time(NULL));
-
-    for (i = 0; i < MAX_HEAP_SIZE; i++) {
-        insert_heap(h, i);
+    for (i = 0; i < n; i++) {
+        insert_heap(h, rand() % 100);
     }
 
-    if (is_heap(h)) {
-        printf("OK\n");
-    } else {
-        printf("KO\n");
-    }
+    time_t start = time(NULL);
+    qsort(h->tree, n, sizeof(int), decreasing_comparator);
+    time_t end = time(NULL);
 
-    int n = extract_min(h);
-    printf("value extracted: %d\n", n);
-
-    write_heap(h);
+    printf("%ld ", end - start);
+    printf("%d\n", n);
     free_heap(h);
-    return 0;
+    return end - start;
 }

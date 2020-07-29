@@ -106,3 +106,19 @@ int extract_min(heap *h) {
 
     return n;
 }
+
+void heapsort(int tab[], int size) {
+    int i;
+    heap tmp_heap;
+    tmp_heap.tree = tab;
+    tmp_heap.size = 0;
+    tmp_heap.max = size;
+
+    for (i = 0; i < size; i++) {
+        insert_heap(&tmp_heap, tab[i]);
+    }
+
+    for (i = 0; i < size; i++) {
+        tab[(size - 1) - i] = extract_min(&tmp_heap);
+    }
+}

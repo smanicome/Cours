@@ -1,0 +1,6 @@
+set output "heapsort.ps"
+set terminal postscript color "landscape"
+set title "nombre de comparaisons de heapsort"
+
+plot \
+"heapsort.dat" using 1:2 title "tri par tas" with lines linetype 1

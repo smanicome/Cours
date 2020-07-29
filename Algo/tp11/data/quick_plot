@@ -1,0 +1,6 @@
+set output "quick_sort.ps"
+set terminal postscript color "landscape"
+set title "nombre de comparaisons de quick_sort"
+
+plot \
+"quicksort.dat" using 1:2 title "tri rapide" with lines linetype 1

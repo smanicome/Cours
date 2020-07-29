@@ -11,6 +11,7 @@ heap *create_heap(int max);
 void insert_heap(heap *h, int elt);
 int is_heap(heap *h);
 int extract_min(heap *h);
+void heapsort(int tab[], int size);
 void free_heap(heap *h);
 
 #endif
