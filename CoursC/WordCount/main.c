@@ -26,7 +26,7 @@ int main(int argc, char const *argv[]) {
         fd = fopen(argv[i], "r");
 
         if (fd==NULL) {
-            perror("fread");
+            perror("fopen");
         } else {
             switch (findOptions(argc, argv)) {
             case 0:

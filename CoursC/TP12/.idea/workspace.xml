@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="54a31662-92d0-4f53-8461-10aebacf9338" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Algo/tp10/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Algo/tp10/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Algo/tp10/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Algo/tp10/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Algo/tp10/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../Algo/tp10/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Algo/tp10/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../../Algo/tp10/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Algo/tp10/cmake-build-debug/CMakeFiles/tp10.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../Algo/tp10/cmake-build-debug/CMakeFiles/tp10.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Algo/tp10/cmake-build-debug/CMakeFiles/tp10.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Algo/tp10/cmake-build-debug/CMakeFiles/tp10.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Algo/tp10/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../../Algo/tp10/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP11/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP11/move.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP11/play.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP11/taquin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP11/taquin.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/tasks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concordance.c" beforeDir="false" afterPath="$PROJECT_DIR$/concordance.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/list.c" beforeDir="false" afterPath="$PROJECT_DIR$/list.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP9/.vscode/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP9/.vscode/tasks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WordCount/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../WordCount/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java/tprestos/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Java/tprestos/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java/tprestos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Java/tprestos/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1dMcnKNEydWaB5U8h09eltj4hBK" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="54a31662-92d0-4f53-8461-10aebacf9338" name="Default Changelist" comment="" />
+      <created>1592238568398</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1592238568398</updated>
+      <workItem from="1592238574254" duration="224000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+</project>

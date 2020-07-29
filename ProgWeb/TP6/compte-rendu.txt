@@ -1,0 +1,11 @@
+Saravanane MANICOME
+
+COMPTE_RENDU LOST IN SPACE
+
+Je ne trouve pas grand chose à dire.
+
+Le projet était intéressant à coder et il fonctionne, il répond aussi aux critères donnés dans le sujet.
+
+Les points difficiles auront été de fractionner le code en plusieurs fonctions et garder à jour les données.
+Pour le deuxème, j'ai trouvé pratique de pouvoir retourner un Object au lieu d'un valeur unique, de cette manière je peux
+mettre à jour le player et les aliens.

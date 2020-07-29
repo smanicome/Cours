@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4e02ec8-c8bb-4893-ba31-926d63554973" name="Default Changelist" comment="" />
+    <list default="true" id="e4e02ec8-c8bb-4893-ba31-926d63554973" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,7 +48,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/HanabiProject" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
@@ -100,6 +102,7 @@
       <updated>1591599711931</updated>
       <workItem from="1591599716459" duration="14727000" />
       <workItem from="1591623418613" duration="54000" />
+      <workItem from="1591719711888" duration="157000" />
     </task>
     <servers />
   </component>
@@ -147,10 +150,10 @@
       <screen x="0" y="0" width="1368" height="912" />
     </state>
     <state x="186" y="101" key="SettingsEditor/0.0.1368.912@0.0.1368.912" timestamp="1591603423766" />
-    <state x="492" y="370" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591607915022">
+    <state x="492" y="370" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591719783908">
       <screen x="0" y="0" width="1368" height="912" />
     </state>
-    <state x="492" y="370" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1368.912@0.0.1368.912" timestamp="1591607915022" />
+    <state x="492" y="370" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1368.912@0.0.1368.912" timestamp="1591719783908" />
     <state x="347" y="194" key="search.everywhere.popup" timestamp="1591610902201">
       <screen x="0" y="0" width="1368" height="912" />
     </state>

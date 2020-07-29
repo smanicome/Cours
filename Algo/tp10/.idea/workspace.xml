@@ -30,9 +30,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b6216ad-3328-4e3c-af43-2e78e4279f4f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp10.c" beforeDir="false" afterPath="$PROJECT_DIR$/tp10.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tp10.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tp10.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tp10.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tp10.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CoursC/WordCount/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../CoursC/WordCount/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java/tprestos/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Java/tprestos/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java/tprestos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Java/tprestos/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +64,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../CoursC/TP12" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -88,6 +94,7 @@
       <workItem from="1589892780540" duration="4000" />
       <workItem from="1591254438743" duration="257000" />
       <workItem from="1591254700584" duration="272000" />
+      <workItem from="1591881923033" duration="72000" />
     </task>
     <servers />
   </component>
@@ -115,10 +122,10 @@
       <screen x="0" y="0" width="1368" height="912" />
     </state>
     <state x="394" y="169" key="#tp10/0.0.1368.912@0.0.1368.912" timestamp="1591254742872" />
-    <state x="465" y="211" key="FileChooserDialogImpl" timestamp="1591254675198">
+    <state x="465" y="211" key="FileChooserDialogImpl" timestamp="1591881992787">
       <screen x="0" y="0" width="1368" height="912" />
     </state>
-    <state x="465" y="211" key="FileChooserDialogImpl/0.0.1368.912@0.0.1368.912" timestamp="1591254675198" />
+    <state x="465" y="211" key="FileChooserDialogImpl/0.0.1368.912@0.0.1368.912" timestamp="1591881992787" />
     <state width="1326" height="233" key="GridCell.Tab.0.bottom" timestamp="1591254971999">
       <screen x="0" y="0" width="1368" height="912" />
     </state>

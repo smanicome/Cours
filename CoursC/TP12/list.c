@@ -7,7 +7,7 @@
  * Create a Node representing 1 occurence of the string 'word'.
  * The string is copied and must be freed when the Node is freed.
  */
-Node *create_node(char word[], int pos) {
+Node *create_node(char word[]) {
     Node *node = malloc(sizeof(Node));
 
     node->word = malloc(strlen(word) + 1);
@@ -90,18 +90,18 @@ Node *find_list(Node* lst, char word[]) {
     return ptr;
 }
 
-Node *insert_first_list(Node *lst, char word[], int pos) {
-    Node *tmp = create_node(word, pos);
+Node *insert_first_list(Node *lst, char word[]) {
+    Node *tmp = create_node(word);
     tmp->next = lst;
     return tmp;
 }
 
-void add_word(table *tab, char word[], int pos) {
+void add_word(table *tab, char word[]) {
     int hash = generateHash(word, strlen(word));
     List current = find_list(tab->bucket[hash], word);
     if (current == NULL) {
         tab->size++;
-        tab->bucket[hash] = insert_first_list(tab->bucket[hash], word, pos);
+        tab->bucket[hash] = insert_first_list(tab->bucket[hash], word);
     }
 }
 

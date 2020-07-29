@@ -7,10 +7,8 @@
 
 void read_text(table *tab, FILE *infile) {
     char *word = (char *)malloc(MAX_WORD_LENGTH * sizeof(char));
-    int pos;
     while (fscanf(infile, "%s ", word) != -1) {
-        add_word(tab, word, pos);
-        pos++;
+        add_word(tab, word);
     }
 
     free(word);

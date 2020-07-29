@@ -5,15 +5,9 @@ const RIGHT = 1;
 const UP = 2;
 const DOWN = 3;
 const SPACE = 4;
+const SPEED = 5;
 
-let canvas;
-let player;
-let aliens = [];
-let bullets = [];
-
-function drawTriangle(x, y, color) {
-	let context = canvas.getContext('2d');
-
+function drawTriangle(x, y, color, context) {
 	context.fillStyle = color;
 
 	context.beginPath();
@@ -25,9 +19,7 @@ function drawTriangle(x, y, color) {
 	context.fill();
 }
 
-function drawCircle(x, y, color) {
-	let context = canvas.getContext('2d');
-
+function drawCircle(x, y, color, context) {
 	context.fillStyle = color;
 
 	context.beginPath();
@@ -37,8 +29,7 @@ function drawCircle(x, y, color) {
 	context.fill();
 }
 
-function drawText(text, color) {
-	let context = canvas.getContext('2d');
+function drawText(text, color, context, canvas) {
 	context.beginPath();
 	context.font = "50px Arial"
 	context.fillStyle = color;
@@ -50,7 +41,7 @@ class Bullet {
 		this.x = x;
 		this.y = y - 10;
 		this.start = this.y;
-		this.speed = 5;
+		this.speed = SPEED;
 	}
 
 	reduceSpeed() {
@@ -61,19 +52,21 @@ class Bullet {
 		this.y = this.y - this.speed;
 	}
 
-	dies() {
+	dies(canvas) {
 		return ( ((this.start - this.y) >= 2 * canvas.height / 3) || this.y <= 0 )
 	}
 
-	draw() {
-		drawCircle(this.x, this.y, "tomato");
+	draw(context) {
+		drawCircle(this.x, this.y, "tomato", context);
 	}
 }
 
 class Player {
-	constructor() {
+	constructor(canvas) {
 		this.x = Math.round(canvas.width / 2);
 		this.y = canvas.height - 20;
+		this.bullets = [];
+
 		this.actions = {
 			LEFT: false,
 			RIGHT: false,
@@ -123,45 +116,48 @@ class Player {
 	}
 
 	shoot() {
-		bullets.push(new Bullet(this.x, this.y));
+		this.bullets.push(new Bullet(this.x, this.y));
 	}
 
-	draw() {
-		drawTriangle(this.x, this.y, "red");
+	draw(context) {
+		drawTriangle(this.x, this.y, "red", context);
 	}
 
-	move() {
+	move(canvas) {
 		if (this.actions.DOWN && this.y < canvas.height) {
-			this.y += 5;
+			this.y += SPEED;
 		}
 		if (this.actions.UP && this.y > 0) {
-			this.y -= 5;
+			this.y -= SPEED;
 		}
 		if (this.actions.LEFT && this.x > 0) {
-			this.x -= 5;
+			this.x -= SPEED;
 		}
 		if (this.actions.RIGHT && this.x < canvas.width ) {
-			this.x += 5;
+			this.x += SPEED;
 		}
 		if (this.actions.SPACE) {
 			this.shoot();
 		}
 	}
 
-	alienCollision() {
-		for(let i = 0; i < aliens.length; i++) {
-			let alien = aliens[i];
-			if ( (alien.x+1 >= this.x -1) && (alien.x-1 <= this.x +1) && (alien.y+1 >= this.y -1) && (alien.y-1 <= this.y +1) ) {
-				return true;
-			}
-		}
+	bulletCollision(bullet) {
+		return (bullet.x >= this.x -1)
+			&& (bullet.x <= this.x +1)
+			&& (bullet.y >= this.y -1)
+			&& (bullet.y <= this.y +1);
+	}
 
-		return false;
+	alienCollision(alien) {
+		return (alien.x+1 >= this.x -1)
+			&& (alien.x-1 <= this.x +1)
+			&& (alien.y+1 >= this.y -1)
+			&& (alien.y-1 <= this.y +1);
 	}
 }
 
 class Alien {
-	constructor() {
+	constructor(canvas) {
 		let rnj = Math.round((Math.random() * canvas.width));
 		this.x = rnj;
 		this.y = rnj % 50;
@@ -182,7 +178,7 @@ class Alien {
 		this.speed = this.speed * 1.08;
 	}
 
-	move() {
+	move(canvas) {
 		if (this.verticalDirection === DOWN) {
 			if (this.y >= canvas.height) {
 				this.verticalDirection = UP;
@@ -218,72 +214,157 @@ class Alien {
 		}
 	}
 
-	draw() {
-		drawTriangle(this.x, this.y, "yellow");
+	draw(context) {
+		drawTriangle(this.x, this.y, "yellow", context);
 	}
 
-	bulletCollision() {
-		for(let i = 0; i < bullets.length; i++) {
-			let bullet = bullets[i];
-			if ( (bullet.x >= this.x -1) && (bullet.x <= this.x +1) && (bullet.y >= this.y -1) && (bullet.y <= this.y +1) ) {
-				bullets = bullets.filter((bullet) => bullet !== bullets[i]);
-				return true;
-			}
-		}
-
-		return false;
+	bulletCollision(bullet) {
+		return (bullet.x >= this.x -1)
+			&& (bullet.x <= this.x +1)
+			&& (bullet.y >= this.y -1)
+			&& (bullet.y <= this.y +1)
 	}
 }
 
-function clearCanvas() {
-	let context = canvas.getContext('2d');
+function clearCanvas(canvas, context) {
 	context.fillStyle = "black";
 	context.fillRect(0, 0, canvas.width, canvas.height);
 }
 
-function drawAll() {
-	clearCanvas();
+function moveAll(canvas, player, aliens, context) {
+	player.move(canvas);
+	for (let i = 0; i < player.bullets.length; i++) {
+		let bullet = player.bullets[i];
+		bullet.move();
+		bullet.reduceSpeed();
 
-	for (let i = 0; i < bullets.length; i++) {
-		bullets[i].move();
-		bullets[i].reduceSpeed();
-		bullets[i].draw();
-		if(bullets[i].dies()) {
-			bullets = bullets.filter((bullet) => bullet !== bullets[i]);
+		if(bullet.dies(canvas)) {
+			player.bullets = player.bullets.filter((b) => b !== bullet);
 		}
 	}
 
 	for (let i = 0; i < aliens.length; i++) {
-		aliens[i].move();
-		aliens[i].draw();
-		if(aliens[i].bulletCollision()) {
-			aliens = aliens.filter((alien) => alien !== aliens[i]);
+		let alien = aliens[i];
+		alien.move(canvas);
+	}
+
+	return player;
+}
+
+function drawAll(player, aliens, context) {
+	player.draw(context);
+
+	for (let i = 0; i < player.bullets.length; i++) {
+		let bullet = player.bullets[i];
+		bullet.draw(context);
+	}
+
+	for (let i = 0; i < aliens.length; i++) {
+		let alien = aliens[i];
+		alien.draw(context);
+	}
+}
+
+function countLoop(count, aliens, player) {
+	count = (count + 1) % 10;
+	if (count === 9) {
+		for (let i=0; i< aliens.length / 5; i++) {
+			let alien = aliens[Math.floor(Math.random() * 260)];
+
+			if (alien === undefined) continue;
+
+			if (alien.x < player.x) {
+				alien.horizontalDirection = RIGHT;
+			} else {
+				alien.horizontalDirection = LEFT;
+			}
+
+			if (alien.y < player.y) {
+				alien.verticalDirection = DOWN;
+			} else {
+				alien.verticalDirection = UP;
+			}
 		}
 	}
 
-	player.move();
-	player.draw();
+	return count;
+}
 
-	if(player.alienCollision()) {
-		drawText("You died...", "red");
+function detectPlayerCollision(player, aliens) {
+	for (let i = 0; i < aliens.length; i++) {
+		let alien = aliens[i];
+		if (player.alienCollision(alien)) {
+			return true;
+		}
+	}
+
+	for (let i = 0; i < player.bullets.length; i++) {
+		let bullet = player.bullets[i];
+		if (player.bulletCollision(bullet)) {
+			return true;
+		}
+	}
+
+	return false
+}
+
+function detectAlienCollision(player, aliens) {
+	for (let i = 0; i < aliens.length; i++) {
+		let alien = aliens[i];
+
+		for (let j = 0; j < player.bullets.length; j++) {
+			let bullet = player.bullets[j];
+			if (alien.bulletCollision(bullet)) {
+				console.log("OK")
+				player.bullets = player.bullets.filter((b) => b !== bullet);
+				aliens = aliens.filter((a) => a !== alien);
+			}
+		}
+	}
+
+	return {
+		"player": player,
+		"aliens": aliens
+	};
+}
+
+function updateAll(count, canvas, player, aliens, context) {
+	clearCanvas(canvas, context);
+
+	player = moveAll(canvas, player, aliens, context)
+	drawAll(player, aliens, context);
+
+	if(detectPlayerCollision(player, aliens)) {
+		drawText("You died...", "red", context, canvas);
 		return;
 	}
+	let result = detectAlienCollision(player, aliens);
+	player = result.player;
+	aliens = result.aliens;
 
 	if(aliens.length === 0) {
-		drawText("You win !", "green");
+		drawText("You win !", "green", context, canvas);
 		return;
 	}
 
-	window.requestAnimationFrame(drawAll);
+	count = countLoop(count, aliens, player);
+
+	window.requestAnimationFrame(function() {
+		updateAll(count, canvas, player, aliens, context)
+	});
 }
 
 window.onload = function() {
+	let canvas;
+	let player;
+	let aliens = [];
 	canvas = document.getElementById("game_area");
-	player = new Player();
+	let context = canvas.getContext('2d');
+	player = new Player(canvas);
 
 	for (let i = 0; i < 250; i++) {
-		aliens.push(new Alien());
+		aliens.push(new Alien(canvas));
 	}
 
-	drawAll();
+	updateAll(0, canvas, player, aliens, context);
 };
