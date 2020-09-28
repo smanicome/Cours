@@ -1,0 +1,21 @@
+Attestation sur l'honneur :
+
+Nous soussignés Quemener Lucas et Manicome Saravanane déclarons sur l’honneur que ce projet est le résultat de notre travail personnel et que nous n'avons pas copié tout ou partie du code source d’autrui afin de le faire passer pour le nôtre.
+
+Comment compiler et exécuter vos programmes :
+    Un makefile est disponible, via bash, entrer make.
+    L’exécutable est nommé huffman, entrer ./huffman puis le chemin et nom du fichier à décoder.
+    ./huffman <fichier_arbre> <fichier_in> <fichier_out>
+
+Les bugs connus :
+    - La creation de l'arbre huffman bloque au niveau de sa construction en extrayant le dernier element de la file
+      je soupconne donc q->first ou q->last d'être mal assigné.
+
+
+- Comment vous avez mené le travail en binôme :
+    - Répartition du travail :
+La taille du projet ne nous a pas paru suffisante pour garantir l'utilisation de git
+Utilisés : gdb, valgrind
+
+Les difficultés rencontrées et solutions apportées, leçons tirées :
+    -Beaucoup de problèmes sur la lecture de fichiers, on a longtemps essayé avec fscanf() pour au final trouver une solution utilisant fgetc()

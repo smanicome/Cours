@@ -1,0 +1,133 @@
+
+** Installer appache2 ** 
+
+apt-get install apache2
+
+
+
+** Générer une clef privée  avec une taille de module = 2048 bits du serveur ** 
+
+openssl genrsa 2048 > servtest.pem
+
+
+
+** Générer un fichier de demande de signature de certificat (CSR Certificate Signing Request) ** 
+
+openssl req -new -key servtest.pem > servtest.csr
+
+
+Subject: C = FR, ST = Paris, L = Paris, O = ESIPE, OU = EISC, CN = amazon.com, emailAddress = admin@amazon.com
+
+
+
+**  Générer une clef privée  avec une taille de module = 2048 bits de l'autorité de certification **
+
+openssl genrsa -des3 2048 > ca.pem
+
+
+
+**  crée un certificat x509 de l'autorité de certification pour une durée de validité d'un an auto-signé **
+
+openssl req -new -x509 -days 365 -key ca.pem > ca.crt
+
+Subject: C = FR, ST = Paris, L = Paris, O = ESIPE, OU = EISC, CN = cert_CA, emailAddress = admin@cert_CA.fr
+
+
+
+** Signer la demande de certificat du serveur par la cled privée de l'autorité de certification ***  
+
+openssl x509 -req -in servtest.csr -out servtest.crt -CA ca.crt -CAkey ca.pem -CAcreateserial -CAserial ca.srl
+
+
+openssl x509 -text -in servtest.crt
+Certificate:
+    Data:
+        Version: 1 (0x0)
+        Serial Number:
+            6b:7a:eb:1c:9a:d0:45:48:ea:92:99:ad:d4:65:4f:fd:05:6e:96:06
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C = FR, ST = Paris, L = Paris, O = ESIPE, OU = EISC, CN = cert_CA, emailAddress = admin@cert_CA.fr
+        Validity
+            Not Before: Jan 27 18:36:46 2020 GMT
+            Not After : Feb 26 18:36:46 2020 GMT
+        Subject: C = FR, ST = Paris, L = Paris, O = ESIPE, OU = EISC, CN = amazon.com, emailAddress = admin@amazon.com
+
+openssl x509 -text -in ca.crt 
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            4c:c0:72:71:5d:f4:bc:4a:38:54:c1:8b:38:64:a3:51:61:0e:15:53
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C = FR, ST = Paris, L = Paris, O = ESIPE, OU = EISC, CN = cert_CA, emailAddress = admin@cert_CA.fr
+        Validity
+            Not Before: Jan 27 18:34:52 2020 GMT
+            Not After : Jan 26 18:34:52 2021 GMT
+        Subject: C = FR, ST = Paris, L = Paris, O = ESIPE, OU = EISC, CN = cert_CA, emailAddress = admin@cert_CA.fr
+
+** Copier le certificat de serveur et sa clef privée dans le bon répertoire **
+cp servtest.crt /etc/ssl/certs/
+cp servtest.pem /etc/ssl//private/
+
+**  installer sur le navigateur le certificat de l'autorité de certification
+
+
+
+
+
+** Modifier le fichier /etc/apache2/sites-available/000-default.conf en rajoutant les lignes suivantes **
+
+ServerName amazon.com
+Redirect "/" "https://amazon.com/"
+
+
+** Modifier le fichier /etc/apache2/sites-available/default-ssl.conf en rajoutant/décommantant les lignes suivantes **
+
+ServerName amazon.com
+
+SSLEngine on
+
+SSLCertificateFile	/etc/ssl/certs/servtest.crt
+SSLCertificateKeyFile /etc/ssl/private/servtest.pem
+BrowserMatch "MSIE [2-6]" \
+				nokeepalive ssl-unclean-shutdown \
+				downgrade-1.0 force-response-1.0
+
+
+
+** Lancer les commande suivantes ***************
+
+
+a2enmod ssl
+a2enmod headers
+a2ensite default-ssl
+apache2ctl configtest
+systemctl restart apache2
+
+
+** Modéfier le fichier /etc/hosts ***
+
+127.0.0.1 amazon.com
+
+** Cloner la page d'accueil de serveur d'amazon et changer le text "Identifiez-vous pour une meilleure exp�rience" par "Vous �tes sur un fake serveur"
+
+** Mettre les pages clon�es dans le repertoire d'apache /var/www/html
+
+
+        
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
