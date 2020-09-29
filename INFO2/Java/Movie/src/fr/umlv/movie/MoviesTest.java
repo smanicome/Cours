@@ -57,43 +57,43 @@ public class MoviesTest {
   }
 
 
-//  @Test @Tag("Q4")
-//  public void numberOfUniqueActors() throws IOException {
-//    var path = Path.of("movies.txt");
-//    var movies = Movies.movies(path);
-//    var numberOfUniqueActors = Movies.numberOfUniqueActors(movies);
-//
-//    assertEquals(170_509, numberOfUniqueActors);
-//  }
-//
-//
-//  @Test @Tag("Q5")
-//  public void numberOfMoviesByActor() throws IOException {
-//    var path = Path.of("movies.txt");
-//    var movies = Movies.movies(path);
-//    var numberOfMoviesByActor = Movies.numberOfMoviesByActor(movies);
-//
-//    var expectedActorCouples = List.of(
-//        Map.entry("Emily Watson", 9L),
-//        Map.entry("Kevin Smith", 13L),
-//        Map.entry("Adam Sandler", 17L),
-//        Map.entry("Matt Damon", 21L),
-//        Map.entry("Tchéky Karyo", 22L)
-//    );
-//    expectedActorCouples.forEach(entry -> assertEquals(entry.getValue(), numberOfMoviesByActor.get(entry.getKey())));
-//  }
-//
-//
-//  @Test @Tag("Q6")
-//  public void actorInMostMovies() throws IOException {
-//    var path = Path.of("movies.txt");
-//    var movies = Movies.movies(path);
-//    var numberOfMoviesByActor = Movies.numberOfMoviesByActor(movies);
-//    var actorInMostMovies = Movies.actorInMostMovies(numberOfMoviesByActor).orElseThrow();
-//
-//    assertAll(
-//        () -> assertEquals("Frank Welker", actorInMostMovies.getKey()),
-//        () -> assertEquals(92, actorInMostMovies.getValue())
-//    );
-//  }
+  @Test @Tag("Q4")
+  public void numberOfUniqueActors() throws IOException {
+    var path = Path.of("movies.txt");
+    var movies = Movies.movies(path);
+    var numberOfUniqueActors = Movies.numberOfUniqueActors(movies);
+
+    assertEquals(170_509, numberOfUniqueActors);
+  }
+
+
+  @Test @Tag("Q5")
+  public void numberOfMoviesByActor() throws IOException {
+    var path = Path.of("movies.txt");
+    var movies = Movies.movies(path);
+    var numberOfMoviesByActor = Movies.numberOfMoviesByActor(movies);
+
+    var expectedActorCouples = List.of(
+        Map.entry("Emily Watson", 9L),
+        Map.entry("Kevin Smith", 13L),
+        Map.entry("Adam Sandler", 17L),
+        Map.entry("Matt Damon", 21L),
+        Map.entry("Tchéky Karyo", 22L)
+    );
+    expectedActorCouples.forEach(entry -> assertEquals(entry.getValue(), numberOfMoviesByActor.get(entry.getKey())));
+  }
+
+
+  @Test @Tag("Q6")
+  public void actorInMostMovies() throws IOException {
+    var path = Path.of("movies.txt");
+    var movies = Movies.movies(path);
+    var numberOfMoviesByActor = Movies.numberOfMoviesByActor(movies);
+    var actorInMostMovies = Movies.actorInMostMovies(numberOfMoviesByActor).orElseThrow();
+
+    assertAll(
+        () -> assertEquals("Frank Welker", actorInMostMovies.getKey()),
+        () -> assertEquals(92, actorInMostMovies.getValue())
+    );
+  }
 }

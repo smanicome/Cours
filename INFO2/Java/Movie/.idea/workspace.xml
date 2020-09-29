@@ -19,7 +19,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="33a19f88-377e-4d46-85d6-7996bad9d9fa" name="Default Changelist" comment="" />
+    <list default="true" id="33a19f88-377e-4d46-85d6-7996bad9d9fa" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movie.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Movie.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Movie/fr/umlv/movie/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Movie/fr/umlv/movie/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Movie/fr/umlv/movie/movies.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/umlv/movie/Movies.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/umlv/movie/Movies.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/umlv/movie/MoviesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/umlv/movie/MoviesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-inside/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../java-inside/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,12 +51,22 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../java-inside" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\smani\Documents\GitHub\Cours\INFO2\Java\Movie\src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.MoviesTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="fr.umlv.movie.Main" />
       <module name="Movie" />
@@ -61,8 +80,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MoviesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Movie" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fr.umlv.movie.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="fr.umlv.movie" />
+      <option name="MAIN_CLASS_NAME" value="fr.umlv.movie.MoviesTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MoviesTest" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -78,6 +124,7 @@
       <workItem from="1601301916061" duration="2296000" />
       <workItem from="1601305807283" duration="582000" />
       <workItem from="1601361456291" duration="77000" />
+      <workItem from="1601399240227" duration="5552000" />
     </task>
     <servers />
   </component>
@@ -101,25 +148,41 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1601361518016" />
-    <state width="1493" height="223" key="GridCell.Tab.0.bottom" timestamp="1601304930384">
+    <state width="1493" height="223" key="GridCell.Tab.0.bottom" timestamp="1601403810120">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1601304930384" />
-    <state width="1493" height="223" key="GridCell.Tab.0.center" timestamp="1601304930384">
+    <state width="1493" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1601403810120" />
+    <state width="1493" height="223" key="GridCell.Tab.0.center" timestamp="1601403810120">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1601304930384" />
-    <state width="1493" height="223" key="GridCell.Tab.0.left" timestamp="1601304930384">
+    <state width="1493" height="223" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1601403810120" />
+    <state width="1493" height="223" key="GridCell.Tab.0.left" timestamp="1601403810120">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1601304930384" />
-    <state width="1493" height="223" key="GridCell.Tab.0.right" timestamp="1601304930384">
+    <state width="1493" height="223" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1601403810120" />
+    <state width="1493" height="223" key="GridCell.Tab.0.right" timestamp="1601403810120">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1601304930384" />
+    <state width="1493" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1601403810120" />
+    <state x="277" y="77" key="SettingsEditor" timestamp="1601400067622">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="277" y="77" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1601400067622" />
+    <state x="498" y="324" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1601400231362">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="498" y="324" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.864@0.0.1536.864" timestamp="1601400231362" />
+    <state x="586" y="346" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601399915773">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="586" y="346" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864@0.0.1536.864" timestamp="1601399915773" />
     <state x="360" y="53" key="new project wizard" timestamp="1601361530272">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="360" y="53" key="new project wizard/0.0.1536.864@0.0.1536.864" timestamp="1601361530272" />
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1601402279566">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1601402279566" />
   </component>
 </project>
