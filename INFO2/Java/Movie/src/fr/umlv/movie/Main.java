@@ -7,7 +7,7 @@ import java.util.stream.Stream;
 
 public class Main {
     public static void main(String[] args) {
-        Path path = Path.of("");
+        Path path = Path.of("movies.txt");
 
         try(Stream<String> stream = Files.lines(path)) {
             stream.forEach(System.out::println);
@@ -16,4 +16,6 @@ public class Main {
             e.printStackTrace();
         }
     }
+    
+    
 }
