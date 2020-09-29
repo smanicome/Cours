@@ -61,17 +61,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
@@ -87,6 +76,8 @@
       <option name="presentableId" value="Default" />
       <updated>1601301914508</updated>
       <workItem from="1601301916061" duration="2296000" />
+      <workItem from="1601305807283" duration="582000" />
+      <workItem from="1601361456291" duration="77000" />
     </task>
     <servers />
   </component>
@@ -103,12 +94,13 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1601302776802">
+    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1601361518016">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1601302776802" />
+    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1601361518016" />
     <state width="1493" height="223" key="GridCell.Tab.0.bottom" timestamp="1601304930384">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -125,5 +117,9 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1493" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1601304930384" />
+    <state x="360" y="53" key="new project wizard" timestamp="1601361530272">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="360" y="53" key="new project wizard/0.0.1536.864@0.0.1536.864" timestamp="1601361530272" />
   </component>
 </project>
