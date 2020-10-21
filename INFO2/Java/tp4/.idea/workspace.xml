@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d4bbe607-f345-4792-a5e7-93df6f4ba32e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Concurrence/TD3/src/fr/umlv/conc/StupidRendezVous.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Concurrence/TD4/src/fr/upem/concurrence/td04/BoundedSafeQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Concurrence/TD4/src/fr/upem/concurrence/td04/RendezVous.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Concurrence/TD4/src/fr/upem/concurrence/td04/UnboundedSafeQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Concurrence/TD4/src/fr/upem/concurrence/td04/Vote.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Concurrence/TD4/test/fr/upem/concurrence/td04/VoteTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/compte_rendu_tp4.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Concurrence/TD3/out/production/TD3/fr/umlv/conc/HonorBoard.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Concurrence/TD3/out/production/TD3/fr/umlv/conc/HonorBoard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Concurrence/TD3/src/fr/umlv/conc/FindPrime.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Concurrence/TD3/src/fr/umlv/conc/FindPrime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Concurrence/TD3/src/fr/umlv/conc/RendezVous.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Concurrence/TD3/src/fr/umlv/conc/RendezVous.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tp4/fr/umlv/set/DynamicHashSet$Entry.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tp4/fr/umlv/set/DynamicHashSet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tp4/fr/umlv/set/IntHashSet$Entry.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tp4/fr/umlv/set/IntHashSet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/tp4/fr/umlv/set/DynamicHashSetTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/tp4/fr/umlv/set/IntHashSetTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/umlv/set/DynamicHashSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/umlv/set/DynamicHashSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/umlv/set/IntHashSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/umlv/set/IntHashSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp4.iml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Users\smani\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\202.7660.26\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1j6GWLQ6Oq0HtqUSJTmj5YwU6bk" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d4bbe607-f345-4792-a5e7-93df6f4ba32e" name="Default Changelist" comment="" />
+      <created>1603117158743</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1603117158743</updated>
+      <workItem from="1603117162355" duration="56000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="548" y="174" key="FileChooserDialogImpl" timestamp="1603117205761">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="548" y="174" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1603117205761" />
+    <state x="353" y="53" key="new project wizard" timestamp="1603117216645">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="353" y="53" key="new project wizard/0.0.1536.864@0.0.1536.864" timestamp="1603117216645" />
+  </component>
+</project>

@@ -7,7 +7,7 @@ public class IntHashSet {
     private static final int bucketsNumber = 2;
     private final Entry[] entries = new Entry[bucketsNumber];
 
-    protected static final record Entry(int value, Entry next) {}
+    protected static record Entry(int value, Entry next) {}
 
     private static int getIndex(int hashcode) {
         return hashcode & (bucketsNumber - 1);

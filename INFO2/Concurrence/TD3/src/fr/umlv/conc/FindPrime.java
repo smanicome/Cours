@@ -1,4 +1,4 @@
-package fr.upem.concurrence.td03;
+package fr.umlv.conc;
 
 import java.util.Random;
 

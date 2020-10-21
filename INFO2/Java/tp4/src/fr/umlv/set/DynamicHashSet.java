@@ -1,10 +1,10 @@
 package fr.umlv.set;
 
-import java.util.ArrayList;
 import java.util.Objects;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Consumer;
 
-public class DynamicHashSet<T> {
+public final class DynamicHashSet<T> {
     private int bucketsNumber = 2;
     private int size = 0;
 
@@ -17,7 +17,7 @@ public class DynamicHashSet<T> {
         return hashcode & (bucketsNumber - 1);
     }
 
-    public <E> boolean contains(E value) {
+    public boolean contains(Object value) {
         Objects.requireNonNull(value);
         Entry<T> entry = entries[getIndex(value.hashCode())];
         for (Entry<T> i = entry; i != null ; i = i.next()) {
@@ -44,14 +44,19 @@ public class DynamicHashSet<T> {
         if(size < (bucketsNumber / 2))
             return;
 
-        ArrayList<T> valueList = new ArrayList<>();
-        forEach(valueList::add);
+        Object[] valueList = new Object[size];
+        AtomicInteger index = new AtomicInteger(0);
+        forEach((T value) -> {
+            valueList[index.getAndIncrement()] = value;
+        });
 
         bucketsNumber = bucketsNumber * 2;
         entries = (Entry<T>[]) new Entry[bucketsNumber];
 
         size = 0;
-        valueList.forEach(this::add);
+        for(Object value : valueList) {
+            add((T) value);
+        }
     }
 
     public int size() {
