@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Concurrence">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/MANICOME_TP3.zip!/" />
+      <root url="jar://$PROJECT_DIR$/MANICOME_TP2.zip!/" />
+      <root url="jar://$PROJECT_DIR$/MANICOME_TP1.zip!/" />
+      <root url="jar://$PROJECT_DIR$/MANICOME_TP4.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

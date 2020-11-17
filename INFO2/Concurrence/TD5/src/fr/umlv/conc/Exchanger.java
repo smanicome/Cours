@@ -1,3 +1,5 @@
+package fr.umlv.conc;
+
 public class Exchanger<E> {
     private final Object lock = new Object();
     public enum ExchangerState {

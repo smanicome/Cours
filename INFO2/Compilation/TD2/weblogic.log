@@ -1,0 +1,24 @@
+Sun Sep 02 23:13:00 MSD 2012 [test] [[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'] Warning - Timer (Checkpoint) has been triggered with a tick (205 873) that is less than or equal to the last tick that was received (205 873). This could happen in a cluster due to clock synchronization with the timer authority. The current trigger will be ignored, and operation will be skipped.
+    Mon Sep 03 10:35:54 MSD 2012 [test] [[ACTIVE] ExecuteThread: '19' for queue: 'weblogic.kernel.Default (self-tuning)'] Info - 
+     [OSB Tracing] Inbound request was received. 
+
+     Service Ref = Some/URL
+     URI = Another/URL
+     Message ID = u-u-i-d
+     Request metadata =
+        <xml-fragment>
+          <tran:headers xsi:type="http:HttpRequestHeaders" xmlns:http="http://www.bea.com/wli/sb/transports/http" xmlns:tran="http://www.bea.com/wli/sb/transports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <http:Accept-Encoding>gzip, deflate,gzip, deflate</http:Accept-Encoding>
+            <http:Connection>Keep-Alive</http:Connection>
+            <http:Content-Length>666</http:Content-Length>
+            <http:Content-Type>text/xml; charset=utf-8</http:Content-Type>
+            <http:Host>some.host.name</http:Host>
+            <http:SOAPAction>""</http:SOAPAction>
+          </tran:headers>
+          <tran:encoding xmlns:tran="http://www.bea.com/wli/sb/transports">utf-8</tran:encoding>
+          <http:client-host xmlns:http="http://www.bea.com/wli/sb/transports/http">1.2.3.4</http:client-host>
+          <http:client-address xmlns:http="http://www.bea.com/wli/sb/transports/http">1.2.3.4</http:client-address>
+          <http:http-method xmlns:http="http://www.bea.com/wli/sb/transports/http">POST</http:http-method>
+        </xml-fragment>
+     Payload =  
+    <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><XMLHere/></s:Envelope>

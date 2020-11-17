@@ -1,3 +1,5 @@
+package fr.umlv.conc;
+
 public class ExchangerExample {
   public static void main(String[] args) throws InterruptedException {
     var exchanger = new Exchanger<String>();

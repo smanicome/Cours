@@ -1,0 +1,2 @@
+[Wed Nov 04 09:14:49.263227 2020] [mpm_event:notice] [pid 568:tid 140234436707456] AH00489: Apache/2.4.38 (Debian) OpenSSL/1.1.1d configured -- resuming normal operations
+[Wed Nov 04 09:14:49.263371 2020] [core:notice] [pid 568:tid 140234436707456] AH00094: Command line: '/usr/sbin/apache2'

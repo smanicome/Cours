@@ -1,3 +1,5 @@
+package fr.umlv.conc;
+
 import java.util.stream.IntStream;
 
 public class ExampleExchanger2 {
